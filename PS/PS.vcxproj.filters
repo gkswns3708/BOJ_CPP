@@ -21,5 +21,8 @@
     <ClCompile Include="BaekJoon 19238번 스타트 택시.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 4889번 안정적인 문자열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
