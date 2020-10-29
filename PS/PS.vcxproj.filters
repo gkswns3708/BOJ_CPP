@@ -24,5 +24,8 @@
     <ClCompile Include="BaekJoon 4889번 안정적인 문자열.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 15311번 약 팔기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
