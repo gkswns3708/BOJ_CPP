@@ -42,5 +42,8 @@
     <ClCompile Include="BaekJoon 1194번 달이 차오른다 가자.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2304번 창고 다각형.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
