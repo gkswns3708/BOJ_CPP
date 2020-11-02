@@ -3,7 +3,7 @@ using namespace std;
 typedef long long int ll;
 
 typedef struct Node	{
-	int to, maxjew; 
+	int destination, maxjew; 
 }Node;
 int N, M, K;
 vector<int> island;
@@ -20,30 +20,31 @@ int BFS() {
 	//시작, 끝, 현재까지의 보석 갯수, 보석 종류를 표현한 수
 	queue<tuple<int, int, int, int>> que;
 	vector<int> ans;
+	int maxvalue = 0;
 	for (auto a : edge[1]) {
-		que.push({ 1,a.to,0,1 });
+		que.push({ 1,a.destination,0,1 });
+		visited[a.destination][1] = true;
 	}
 	while (!que.empty()) {
 		auto [from, to, nownum, nowjew] = que.front();
 		if (to == 1) {
-			if (exist(1))	ans.push_back(nownum + 1);
-			else ans.push_back(nownum);
+			if (exist(1))	maxvalue = max(maxvalue,nownum + 1);
+			else maxvalue = max(maxvalue, nownum);
 		}
 		que.pop();
 		for (auto a : edge[to]) {
-			if (visited[a.to][nowjew]) continue;
+			if (visited[a.destination][nowjew]) continue;
 			if (a.maxjew >= nownum) {
-				visited[a.to][nowjew] = true;
-				que.push({ to,a.to,nownum,nowjew });
+				visited[a.destination][nowjew] = true;
+				que.push({ to,a.destination,nownum,nowjew });
 			}
-			if (a.maxjew > nownum && exist(a.to)&& !(nowjew & 1 << a.to)) {
-				visited[a.to][nowjew | 1<<a.to] = true;
-				que.push({ to,a.to,nownum + 1,nowjew | 1 << a.to });
+			if (a.maxjew > nownum && exist(a.destination)&& !(nowjew & 1 << a.destination)) {
+				visited[a.destination][nowjew | 1<<a.destination] = true;
+				que.push({ to,a.destination,nownum + 1,nowjew | 1 << a.destination });
 			}
 		}
 	}
-	if (ans.empty()) return 0;
-	else return *max_element(ans.begin(), ans.end());
+	return maxvalue;
 }
 
 int main() {
