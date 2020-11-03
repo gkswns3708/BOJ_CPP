@@ -3,48 +3,51 @@ using namespace std;
 typedef long long int ll;
 
 typedef struct Node	{
-	int destination, maxjew; 
+	int dest, weight; 
 }Node;
 int N, M, K;
-vector<int> island;
+vector<pair<int,int>> island;
 vector<Node> edge[100+2];
 bool visited[100 + 2][(1 << 15) + 1];
 bool exist(int num) {
-	for (auto a : island) {
-		if (a == num) return true;
-	}
-	return false;
+	for (auto a : island) if (a.second == 1) return true;
+	else return false;
+}
+int findjew(int nowislandnum) {
+	for (auto a : island)if (a.second == nowislandnum) return a.first;
+	else return 0;
 }
 int BFS() {
-
 	//시작, 끝, 현재까지의 보석 갯수, 보석 종류를 표현한 수
 	queue<tuple<int, int, int, int>> que;
-	vector<int> ans;
-	int maxvalue = 0;
-	for (auto a : edge[1]) {
-		que.push({ 1,a.destination,0,1 });
-		visited[a.destination][1] = true;
-	}
+	int ans = 0;
+	que.push({ 0,1,0,1 });
+	visited[1][1] = true;
 	while (!que.empty()) {
-		auto [from, to, nownum, nowjew] = que.front();
-		if (to == 1) {
-			if (exist(1))	maxvalue = max(maxvalue,nownum + 1);
-			else maxvalue = max(maxvalue, nownum);
-		}
+		auto [from, to, num, kind] = que.front();
+		cout << from << " " << to << " " << num << " ";
+		for (int i = 1; i < 15; i++) if (kind & 1 << i) cout << i << " ";
+		cout << "\n";
 		que.pop();
+		if (to == 1) {
+			if (exist(1)) ans = max(ans, num + 1);
+			else  ans = max(ans, num);
+		}
 		for (auto a : edge[to]) {
-			if (visited[a.destination][nowjew]) continue;
-			if (a.maxjew >= nownum) {
-				visited[a.destination][nowjew] = true;
-				que.push({ to,a.destination,nownum,nowjew });
+			if (a.weight < num ) continue;
+			if (a.weight >= num && !visited[a.dest][kind]) {
+				que.push({ to,a.dest,num,kind });
+				visited[a.dest][kind] = true;
 			}
-			if (a.maxjew > nownum && exist(a.destination)&& !(nowjew & 1 << a.destination)) {
-				visited[a.destination][nowjew | 1<<a.destination] = true;
-				que.push({ to,a.destination,nownum + 1,nowjew | 1 << a.destination });
+			int nowkind = kind | 1 << findjew(a.dest);
+			if (a.weight > num && findjew(a.dest)!=0 && !visited[a.dest][nowkind]) {
+				que.push({ to,a.dest,num+1,nowkind });
+				visited[a.dest][nowkind] = true;
 			}
 		}
 	}
-	return maxvalue;
+
+	return ans;
 }
 
 int main() {
@@ -52,8 +55,8 @@ int main() {
 	cin.tie(0);
 	cout.tie(0);
 	cin >> N >> M >> K;
-	for (int i = 0; i < K; i++) {
-		int temp; cin >> temp; island.push_back(temp);
+	for (int i = 1; i <= K; i++) {
+		int temp; cin >> temp; island.push_back({i,temp});
 	}
 	for (int i = 0; i < M; i++) {
 		int from, to, weight; cin >> from >> to >> weight;
