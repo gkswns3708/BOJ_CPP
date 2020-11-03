@@ -51,5 +51,8 @@
     <ClCompile Include="BaekJoon 2001번 보석 줍기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 5923번 바이너리 스도쿠.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
