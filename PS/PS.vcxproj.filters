@@ -63,5 +63,8 @@
     <ClCompile Include="BaekJoon 1965번 상자 넣기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2011번 암호코드.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
