@@ -57,5 +57,8 @@
     <ClCompile Include="BaekJoon 14501번 퇴사.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2302번 극장 좌석.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
