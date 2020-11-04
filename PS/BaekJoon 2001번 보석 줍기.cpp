@@ -1,68 +1,53 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long int ll;
 
-typedef struct Node	{
-	int dest, weight; 
-}Node;
-int N, M, K;
-vector<pair<int,int>> island;
-vector<Node> edge[100+2];
-bool visited[100 + 2][(1 << 15) + 1];
-bool exist(int num) {
-	for (auto a : island) if (a.second == 1) return true;
-	else return false;
-}
-int findjew(int nowislandnum) {
-	for (auto a : island)if (a.second == nowislandnum) return a.first;
-	else return 0;
-}
-int BFS() {
-	//시작, 끝, 현재까지의 보석 갯수, 보석 종류를 표현한 수
-	queue<tuple<int, int, int, int>> que;
-	int ans = 0;
-	que.push({ 0,1,0,1 });
-	visited[1][1] = true;
-	while (!que.empty()) {
-		auto [from, to, num, kind] = que.front();
-		cout << from << " " << to << " " << num << " ";
-		for (int i = 1; i < 15; i++) if (kind & 1 << i) cout << i << " ";
-		cout << "\n";
-		que.pop();
-		if (to == 1) {
-			if (exist(1)) ans = max(ans, num + 1);
-			else  ans = max(ans, num);
-		}
-		for (auto a : edge[to]) {
-			if (a.weight < num ) continue;
-			if (a.weight >= num && !visited[a.dest][kind]) {
-				que.push({ to,a.dest,num,kind });
-				visited[a.dest][kind] = true;
-			}
-			int nowkind = kind | 1 << findjew(a.dest);
-			if (a.weight > num && findjew(a.dest)!=0 && !visited[a.dest][nowkind]) {
-				que.push({ to,a.dest,num+1,nowkind });
-				visited[a.dest][nowkind] = true;
-			}
-		}
-	}
+int n, m, k;
+int Land[101];
+int D[101][101];
+int check[16384][101];
+queue<pair<int, int>> q;
+pair<int, int>p;
 
-	return ans;
-}
 
 int main() {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-	cout.tie(0);
-	cin >> N >> M >> K;
-	for (int i = 1; i <= K; i++) {
-		int temp; cin >> temp; island.push_back({i,temp});
-	}
-	for (int i = 0; i < M; i++) {
-		int from, to, weight; cin >> from >> to >> weight;
-		edge[from].push_back({ to,weight });
-		edge[to].push_back({ from,weight });
-	}
-	cout << BFS() << "\n";
-	return 0;
+    memset(Land, -1, sizeof(Land)); //보석이 있는 섬이면 0이상의 값, 없으면 -1
+    memset(D, -1, sizeof(D)); // 다리
+    memset(check, -1, sizeof(check)); // 지금 좌표에서 가질 수 있는 최대 보석의 수
+    cin >> n >> m >> k;
+    int ans = 0;
+    for (int i = 0; i < k; i++) {
+        int z;
+        cin >> z;
+        Land[z - 1] = i;
+    }
+    for (int i = 0; i < m; i++) {
+        int a, b, c;
+        cin >> a >> b >> c;
+        D[a - 1][b - 1] = c;
+        D[b - 1][a - 1] = c;
+    }
+    check[0][0] = 0;
+    q.push(make_pair(0, 0));
+    while (!q.empty()) {
+        p = q.front(); q.pop();
+        int key = p.first; //보석을 주운 섬의 번호들
+        int x = p.second; // 현재 위치
+        if (x == 0) ans = max(check[key][x], ans); // 0번 섬에 왔으면 ans 최대값을 갱신함
+        if (Land[x] != -1 && !(key & 1 << Land[x])) { //x섬에 보석이 있는데 그동안 줍지 않았을 경우
+            int nkey = key | 1 << Land[x];
+            if (check[nkey][x] < check[key][x] + 1) {
+                check[nkey][x] = check[key][x] + 1;
+                q.push(make_pair(nkey, x));
+            }
+        }
+        for (int i = 0; i < n; i++) { // for문을 이용해 x번 섬에서 nx번 섬으로 이동할 곳이 있는지 확인
+            int nx = i;
+            int Max = D[x][i];
+            if (check[key][x] <= Max && check[key][nx] < check[key][x]) {
+                check[key][nx] = check[key][x];
+                q.push(make_pair(key, nx));
+            }
+        }
+    }
+    cout << ans << endl;
 }
