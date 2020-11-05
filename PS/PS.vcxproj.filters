@@ -69,5 +69,8 @@
     <ClCompile Include="BaekJoon 2410번 2의 멱수의 합.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2618번 경찰차.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
