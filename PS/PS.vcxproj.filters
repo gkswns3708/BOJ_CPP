@@ -93,5 +93,8 @@
     <ClCompile Include="BaekJoon 2848번 알고스팟어.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 4149번 큰 수 소인수분해.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
