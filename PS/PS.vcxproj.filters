@@ -96,5 +96,8 @@
     <ClCompile Include="BaekJoon 4149번 큰 수 소인수분해.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 13926번 gcd(n,k) = 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
