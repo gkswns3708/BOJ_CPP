@@ -54,15 +54,13 @@ namespace pollard_rho {
 	ll f(ll x, ll n, ll c) { return (c + mulmod(x, x, n)) % n; }
 	void rec(ll n, vector<ll>& v) {
 		if (n == 1) return;
-		//2로 나누어지면 2가 소인수가 됨으로 v.push를 진행
-		//그 후 2로 나눈 수를 가지고 다시 rec함수를 진행
+		//2의 거듭제곱꼴을 모두 마치고 난뒤의 수가 소수인지 판별
+		//소수면 바로 v.push후 종료 남은 소수를 판별할 필요가 없음
 		if (n % 2 == 0) {
 			v.push_back(2);
 			rec(n / 2, v);
 			return;
 		}
-		//2의 거듭제곱꼴을 모두 마치고 난뒤의 수가 소수인지 판별
-		//소수면 바로 v.push후 종료 남은 소수를 판별할 필요가 없음
 		if (miller_rabin::isprime(n)) {
 			v.push_back(n);
 			return;
@@ -80,13 +78,13 @@ namespace pollard_rho {
 			if (a != b) break;
 		}
 		ll x = gcd(abs(a - b), n);
-
 		rec(x, v);
 		rec(n / x, v);
 	}
-	vector<ll> makeans(int n){
+	vector<ll> factorize(ll n) {
 		vector<ll> ret;
 		rec(n, ret);
+		sort(ret.begin(), ret.end());
 		return ret;
 	}
 };
@@ -94,8 +92,8 @@ namespace pollard_rho {
 int main() {
 	fastio;
 	ll n; cin >> n;
-	vector<ll> ans = pollard_rho::makeans(n);
-	sort(ans.begin(), ans.end());
+	vector<ll> ans = pollard_rho::factorize(n);
 	for (auto i : ans) cout << i << '\n';
 	return 0;
 }
+
