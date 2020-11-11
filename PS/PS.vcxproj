@@ -218,6 +218,7 @@
     <ClCompile Include="BaekJoon 2848번 알고스팟어.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 3015번 오아시스 재결합.cpp" />
     <ClCompile Include="BaekJoon 4149번 큰 수 소인수분해.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

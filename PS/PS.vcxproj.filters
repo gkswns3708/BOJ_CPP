@@ -108,5 +108,8 @@
     <ClCompile Include="BaekJoon 13705번 Ax+Bsin(x)=C.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 3015번 오아시스 재결합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
