@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int N, cnt;
+int N, cnt;;
 int arr[25 + 1][25 + 1];
 int visited[25 + 1][25 + 1];
 
