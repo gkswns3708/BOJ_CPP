@@ -129,5 +129,8 @@
     <ClCompile Include="BaekJoon 8012번 한동이는 영업사원!.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 15480번 LCA와 쿼리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
