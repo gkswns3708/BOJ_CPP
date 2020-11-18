@@ -147,5 +147,8 @@
     <ClCompile Include="BaekJoon 16975번 수열과 쿼리 21.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Baekjoon 13925번 수열과 쿼리 13.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
