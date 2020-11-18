@@ -1,98 +1,77 @@
 #include <bits/stdc++.h>
+#define fastio ios::sync_with_stdio(0), cin.tie(0), cout.tie(0)
 using namespace std;
-typedef long long ll;
 
-ll init(vector<ll>& arr, vector<ll>& tree, int node, int start, int end) {
-	if (start == end)
-		return tree[node] = arr[start];
+const int MOD = int(1e9) + 7;
 
-	int mid = (start + end) / 2;
-	return tree[node] = init(arr, tree, node * 2, start, mid) + init(arr, tree, node * 2 + 1, mid + 1, end);
-}
+struct SegTree {
+	int tree[1 << 18], lazy[1 << 18][2];
+	int sz = 1 << 17;
 
-void Update_lazy(vector<ll>& tree, vector<ll>& lazy, int node, int start, int end) {
-	if (lazy[node] == 0)
-		return;
-
-	tree[node] += (end - start + 1) * lazy[node];
-
-	if (start != end) {
-		lazy[node * 2] += lazy[node];
-		lazy[node * 2 + 1] += lazy[node];
-	}
-
-	lazy[node] = 0;
-}
-
-void Update_range(vector<ll>& tree, vector<ll>& lazy, int node, int start, int end, int left, int right, ll val) {
-
-	Update_lazy(tree, lazy, node, start, end);
-
-	if (left > end || right < start)
-		return;
-
-	if (left <= start && end <= right) {
-		tree[node] += (end - start + 1) * val;
-
-		if (start != end) {
-			lazy[node * 2] += val;
-			lazy[node * 2 + 1] += val;
+	void construct() {
+		for (int i = sz - 1; i > 0; i--) {
+			tree[i] = (tree[i << 1] + tree[i << 1 | 1]) % MOD;
 		}
-		return;
 	}
-	int mid = (start + end) / 2;
-	Update_range(tree, lazy, node * 2, start, mid, left, right, val);
-	Update_range(tree, lazy, node * 2 + 1, mid + 1, end, left, right, val);
-
-	tree[node] = tree[node * 2] + tree[node * 2 + 1];
-}
-
-ll sum(vector<ll>& tree, vector<ll>& lazy, int node, int start, int end, int left, int right) {
-	Update_lazy(tree, lazy, node, start, end);
-
-	if (left > end || right < start)
-		return 0;
-	if (left <= start && end <= right)
-		return tree[node];
-
-	int mid = (start + end) / 2;
-	return sum(tree, lazy, node * 2, start, mid, left, right) + sum(tree, lazy, node * 2 + 1, mid + 1, end, left, right);
-}
+	void propagate(int node, int nodeL, int nodeR) {
+		//a, b : n -> a * n + b
+		auto& [a, b] = lazy[node];
+		if (a == 1 && b == 0) return;
+		if (nodeL != nodeR) {
+			for (int i = node * 2; i <= node * 2 + 1; i++) {
+				auto& [c, d] = lazy[i];
+				c = (1LL * a * c) % MOD;
+				d = (1LL * a * d + b) % MOD;
+			}
+		}
+		tree[node] = (1LL * a * tree[node] + 1LL * (nodeR - nodeL + 1) * b) % MOD;
+		a = 1, b = 0;
+	}
+	//[l, r] -> mul * [l, r] + sum
+	void update(int L, int R, int nodeNum, int nodeL, int nodeR, int mul, int sum) {
+		propagate(nodeNum, nodeL, nodeR);
+		if (R < nodeL || nodeR < L) return;
+		if (L <= nodeL && nodeR <= R) {
+			auto& [a, b] = lazy[nodeNum];
+			a = (1LL * a * mul) % MOD;
+			b = (1LL * b * mul + sum) % MOD;
+			propagate(nodeNum, nodeL, nodeR);
+			return;
+		}
+		int mid = nodeL + nodeR >> 1;
+		update(L, R, nodeNum << 1, nodeL, mid, mul, sum);
+		update(L, R, nodeNum << 1 | 1, mid + 1, nodeR, mul, sum);
+		tree[nodeNum] = (tree[nodeNum << 1] + tree[nodeNum << 1 | 1]) % MOD;
+	}
+	void update(int l, int r, int mul, int sum) {
+		update(l, r, 1, 1, sz, mul, sum);
+	}
+	//[l, r] : 1-indexed
+	int query(int L, int R, int nodeNum, int nodeL, int nodeR) {
+		propagate(nodeNum, nodeL, nodeR);
+		if (R < nodeL || nodeR < L) return 0;
+		if (L <= nodeL && nodeR <= R) return tree[nodeNum];
+		int mid = nodeL + nodeR >> 1;
+		return (query(L, R, nodeNum << 1, nodeL, mid) + query(L, R, nodeNum << 1 | 1, mid + 1, nodeR)) % MOD;
+	}
+	int query(int l, int r) {
+		return query(l, r, 1, 1, sz);
+	}
+} ST;
 
 int main() {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-	cout.tie(0);
-	int N;
-	cin >> N;
-	int h = (int)ceil(log2(N));
-	int tree_size = (1 << (h + 1));
-
-	vector<ll> arr(N);
-	vector<ll> tree(tree_size);
-	vector<ll> lazy(tree_size);
-
-	for (int i = 0; i < N; i++)
-		cin >> arr[i];
-
-	init(arr, tree, 1, 0, N - 1);
-	int M; cin >> M;
-	while (M--) {
-		int num;
-		cin >> num;
-		if (num == 1) {
-			int left, right;
-			ll val;
-
-			cin >> left >> right >> val;
-			Update_range(tree, lazy, 1, 0, N - 1, left - 1, right - 1, val);
-		}
-
-		else if (num == 2) {
-			int left;
-			cin >> left;
-			cout << sum(tree, lazy, 1, 0, N - 1, left - 1, left - 1) << "\n";
-		}
+	fastio;
+	int n; cin >> n;
+	for (int i = 0; i < n; i++) cin >> ST.tree[ST.sz + i];
+	for (int i = 0; i < 1 << 18; i++) ST.lazy[i][0] = 1;
+	ST.construct();
+	int q; cin >> q;
+	while (q--) {
+		int t, a, b, k; cin >> t >> a >> b;
+		if (t != 4) cin >> k;
+		if (t == 1) ST.update(a, b, 1, k);
+		else if (t == 2) ST.update(a, b, k, 0);
+		else if (t == 3) ST.update(a, b, 0, k);
+		else cout << ST.query(a, b) << '\n';
 	}
-	return 0;
 }
