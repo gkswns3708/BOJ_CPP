@@ -11,7 +11,7 @@ ll init(vector<ll>& arr, vector<ll>& tree, int node, int start, int end) {
 }
 
 void Update_lazy(vector<ll>& tree, vector<ll>& lazy, int node, int start, int end) {
-	if (lazy[node] == 0)
+	if (lazy[node] == 0) 
 		return;
 
 	tree[node] += (end - start + 1) * lazy[node];
@@ -50,13 +50,13 @@ void Update_range(vector<ll>& tree, vector<ll>& lazy, int node, int start, int e
 ll sum(vector<ll>& tree, vector<ll>& lazy, int node, int start, int end, int left, int right) {
 	Update_lazy(tree, lazy, node, start, end);
 
-	if (left > end || right < start)
+	if (left > end || right < start) 
 		return 0;
 	if (left <= start && end <= right)
 		return tree[node];
 
 	int mid = (start + end) / 2;
-	return sum(tree, lazy, node * 2, start, mid, left, right) + sum(tree, lazy, node * 2 + 1, mid + 1, end, left, right);
+	return sum(tree, lazy, node*2, start, mid, left, right) + sum(tree, lazy, node*2+1, mid + 1, end, left, right);
 }
 
 int main() {
@@ -91,7 +91,7 @@ int main() {
 		else if (num == 2) {
 			int left, right;
 			cin >> left >> right;
-			cout << sum(tree, lazy, 1, 0, N - 1, left - 1, right - 1) << "\n";
+			cout << sum(tree, lazy, 1, 0, N - 1, left - 1, right - 1)<<"\n";
 		}
 	}
 	return 0;
