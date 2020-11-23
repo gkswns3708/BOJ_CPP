@@ -159,5 +159,11 @@
     <ClCompile Include="BaekJoon 20164번 홀수 홀릭 호석.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 3190번 뱀.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 14499번 주사위 굴리기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
