@@ -15,9 +15,9 @@ struct ST {
 	ll query(int l, int r) {
 		--l |= size; --r |= size;
 		ll sum = 0;
-		while (l <= r) {
+		while (l < r) {
 			if (l & 1) sum += tree[l++];
-			if (~r & 1) sum += tree[r--];
+			if (r & 1) sum += tree[--r];
 			l >>= 1;
 			r >>= 1;
 		}
@@ -31,7 +31,7 @@ int main() {
 	while (m--) {
 		int type, idx, value; cin >> type >> idx >> value;
 		if (type == 1) 	ST.update(idx, value);
-		else cout << ST.query(idx, value) << "\n";
+		else cout << ST.query(idx, value+1) << "\n";
 	}
 	return 0;
 }
