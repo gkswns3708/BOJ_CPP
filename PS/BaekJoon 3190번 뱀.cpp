@@ -41,9 +41,6 @@ int solved() {
 			arr[y][x] = 2;
 			deq.pop_back();
 		}
-		
-
-		
 		if (!dirinfo.empty() && time == dirinfo.front().first) {
 			auto& [y, x, dir] = deq.front();
 			if (dirinfo.front().second == 1)
