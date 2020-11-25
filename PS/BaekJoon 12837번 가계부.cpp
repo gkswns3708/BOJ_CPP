@@ -7,6 +7,11 @@ struct ST {
 	ll tree[1 << 21];
 	int size = 1 << 20;
 
+	void construct() {
+		for (int i = size - 1; i > 0; i--)
+			tree[i] = tree[i << 1] + tree[i << 1 | 1];
+	}
+
 	void update(int idx, int val) {
 		--idx |= size; tree[idx] += val;
 		while (idx >>= 1)
