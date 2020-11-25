@@ -183,5 +183,8 @@
     <ClCompile Include="BaekJoon 2457번 공주님의 정원.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1744번 수 묶기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
