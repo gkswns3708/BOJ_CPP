@@ -33,7 +33,7 @@ int main() {
 	int arr[100000 + 1] = { 0, };
 	int len = 0;
 	int N = readInt();
-	for (int i = 0; i < N; i++) {
+	for (int i = 0; i < N; ++i) {
 		int val = readInt();
 		int* pos = lower_bound(arr, arr + len, val);
 		*pos = val;
