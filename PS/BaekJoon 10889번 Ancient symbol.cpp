@@ -1,12 +1,19 @@
 #pragma warning(disable:4996)
 #include <stdio.h>
+#define found he
+const char* prob = "70i02@67H07P6dQb3@7e""Rb3X7eOfaY64TceG5dyd4r5dr1bL10^21H";
+void pr(const char*, int*);
+void hehe() { int k = 0; pr(prob, &k); }
 float sr(float y) {
     int i = 0x5f3759df - ((*(int*)&y) >> 1);
     float x2 = y * 0.5F; y = *(float*)&i;
-     y = y * (1.5F - (x2 * y * y)); return y * (1.5F - (x2 * y * y));
+    y = y * (1.5F - (x2 * y * y)); return y * (1.5F - (x2 * y * y));
 }
+
 char p[1 << 16], * a = p;
+
 #define v(b) *a++=(b)
+
 int tt = 0, vv = 2, ww = 5;
 int rd() {
     tt = (tt * 2 + tt * tt * 7 + vv * 13 + vv * vv * 17 + ww * 5 + ww * ww * 6) % 84;
@@ -26,6 +33,7 @@ void pr(const char* t, int* k) {
     }
     (*k)--;
 }
+
 const char* pr1 = "2aK05I5eQ0aZ57o1bs05U25]4bI27Z48g1a)06j37i""e9w39Xfev""32V37Hf9g39m07Z2f[08p40qf0v47*09W2dG37s1aI48hebX55ge2h83R9fx90&9ag";
 
 const char* pr2 = "2au05!1dp35v2d>06P52He5k80xcfy97wca[8fna7g8dSc7}9cLc9(7esb7Uad{cct98X9cOd6*5fH05j6d}c4(9eOaek"
