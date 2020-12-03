@@ -228,5 +228,8 @@
     <ClCompile Include="BaekJoon 2150번 Strongly Connected Component.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1028번 다이아몬드 광산.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
