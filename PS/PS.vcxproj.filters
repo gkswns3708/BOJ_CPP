@@ -231,5 +231,8 @@
     <ClCompile Include="BaekJoon 1028번 다이아몬드 광산.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1924번 2007년.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
