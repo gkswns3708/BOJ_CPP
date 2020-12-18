@@ -234,5 +234,8 @@
     <ClCompile Include="BaekJoon 1924번 2007년.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 9316번 Hello Judge.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
