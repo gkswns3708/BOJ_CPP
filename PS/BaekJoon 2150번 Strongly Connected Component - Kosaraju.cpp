@@ -1,4 +1,3 @@
-#pragma once
 #include <bits/stdc++.h>
 using namespace std;
 #define MAX_V 10000
