@@ -255,5 +255,8 @@
     <ClCompile Include="2020 KAKAO BLIND RECRUITMENT 문자열 압축.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="2020 KAKAO BLIND RECRUITMENT 괄호 변환.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
