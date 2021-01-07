@@ -267,5 +267,8 @@
     <ClCompile Include="BaekJoon 11571번 분수를 소수로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="2019 KAKAO BLIND RECRUITMENT 오픈 채팅방.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
