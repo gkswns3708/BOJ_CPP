@@ -24,6 +24,7 @@ vector<int> solution(int N, vector<int> stages) {
         });
     for (pair<double, int> a : vec2) answer.push_back(a.second);  
     return answer;
+
 }
 
 int main() {
