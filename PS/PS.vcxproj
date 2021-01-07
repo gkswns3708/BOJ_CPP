@@ -140,7 +140,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="2019 KAKAO BLIND RECRUITMENT 오픈 채팅방.cpp" />
+    <ClCompile Include="2019 KAKAO BLIND RECRUITMENT 실패율.cpp" />
+    <ClCompile Include="2019 KAKAO BLIND RECRUITMENT 오픈 채팅방.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="2020 KAKAO BLIND RECRUITMENT 괄호 변환.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
