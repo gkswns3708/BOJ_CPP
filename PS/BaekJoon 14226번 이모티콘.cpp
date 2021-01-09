@@ -1,0 +1,2 @@
+#include <bits/stdc++.h>
+using namespace std;bool v[2000+1][2000+1];int BFS(int N) {queue<tuple<int,int,int>>pq;pq.push({0,0,1});v[1][0]=true;int ans=10000;while(!pq.empty()){auto[t,s,cnt]=pq.front();if(cnt==N){ans=t;break;}pq.pop();if(s!=cnt&&!v[cnt][cnt]){pq.push({t+1,cnt,cnt});v[cnt][cnt]=true;}if(s!=0&&s+cnt<=2000 && !v[cnt + s][s]) {pq.push({ t + 1,s,cnt + s });v[cnt + s][s] = true;}if(cnt-1>=0&&!v[cnt-1][s]){pq.push({t+1,s,cnt-1});v[cnt-1][s]=true;}}return ans;}int main(){int N;cin>>N;cout<<BFS(N);return 0;}
