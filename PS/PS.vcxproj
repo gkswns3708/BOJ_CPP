@@ -335,7 +335,7 @@
     <ClCompile Include="BaekJoon 2623번 음악프로그램.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJOon 2667번 단지번호붙이기.cpp">
+    <ClCompile Include="BaekJoon 2667번 단지번호붙이기 - 1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="BaekJoon 2848번 알고스팟어.cpp">
