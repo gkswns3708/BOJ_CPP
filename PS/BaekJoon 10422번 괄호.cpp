@@ -33,6 +33,6 @@ int main() {
 		N % 2 == 0 ? temp = solution(N) : temp = 0;
 		cout << temp << "\n";
 	}
-
+	//a
 	return 0;
 }
