@@ -291,5 +291,8 @@
     <ClCompile Include="BaekJoon 14907번 프로젝트 스케줄링.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 10422번 괄호.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
