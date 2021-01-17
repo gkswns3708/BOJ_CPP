@@ -27,6 +27,6 @@ int main() {
 	for (auto a : ans) {
 		for(int i = 0 ; i < a.second.first;i++) cout << a.first << " ";
 	}
-	
+	 
 	return 0;
 }
