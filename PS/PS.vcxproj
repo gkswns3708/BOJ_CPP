@@ -164,6 +164,7 @@
     <ClCompile Include="BaekJoon 10889번 Ancient symbol.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 11478번 서로 다른 부분 문자열의 개수.cpp" />
     <ClCompile Include="BaekJoon 11571번 분수를 소수로.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -203,7 +204,9 @@
     <ClCompile Include="BaekJoon 14907번 프로젝트 스케줄링.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 15922번 아우으 우아으이야!!.cpp" />
+    <ClCompile Include="BaekJoon 15922번 아우으 우아으이야!!.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 16404번 주식회사 승범이네.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

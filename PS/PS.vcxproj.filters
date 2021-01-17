@@ -306,5 +306,8 @@
     <ClCompile Include="BaekJoon 15922번 아우으 우아으이야!!.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 11478번 서로 다른 부분 문자열의 개수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
