@@ -5,12 +5,10 @@ typedef long long int ll;
 int K, H, W;
 int arr[200 + 1][200 + 1];
 bool visited[200 + 1][200 + 1][30+1];
-int dy[] = { -1,-2,-2,-1,1,2,2,1 };
-int dx[] = { -2,-1,1,2,2,1,-1,-2 };
+
 
 bool possible(int y, int x, int k) {
-	if (visited[y][x][k] == false && y >= 0 && y < H && x >= 0 && x < W && k<=K && arr[y][x] != 1) return true;
-	else return false;
+	return visited[y][x][k] == false && y >= 0 && y < H&& x >= 0 && x < W&& k <= K && arr[y][x] != 1;
 }
 
 void input() {
@@ -40,8 +38,8 @@ void solution() {
 				}
 			}
 			for (int i = 0; i < 8; i++) {
-				int nx = x + dx[i];
-				int ny = y + dy[i];
+				int nx = x + "10013443"[i] - '2';
+				int ny = y + "01344310"[i] - '2';
 				if (possible( ny,nx,k+1)) {
 					que.push({ ny, nx, k+1 });
 					visited[ny][nx][k + 1] = true;
