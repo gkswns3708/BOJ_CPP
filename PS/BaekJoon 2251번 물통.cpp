@@ -15,7 +15,7 @@ int main() {
 		visited[a][b][c] = true;
 		if (a == 0) ans.push_back(c);
 		if (a + b > B)	que.push({ a + b - B,B,c });
-		elseque.push({ 0,a + b,c });
+		else que.push({ 0,a + b,c });
 		if (a + c > C)	que.push({ a + c - C , b, C });
 		else que.push({ 0,b,a + c });
 		if (b + a > A)	que.push({ A,b + a - A,c });
