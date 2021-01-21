@@ -336,5 +336,8 @@
     <ClCompile Include="BaekJoon 1030번 프랙탈 평면.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 11812번 K진 트리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
