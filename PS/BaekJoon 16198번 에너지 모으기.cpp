@@ -12,26 +12,26 @@ void input() {
 	}
 }
 
-void DFS(vector<int> td, int value) {
-	int size = td.size();
+void DFS(int value) {
+	int size = vec.size();
 	if (size == 2) {
 		ans = max(ans,value);
 		return;
 	}
 	
 	for (int i = 1; i < size - 1; i++) {
-		int temp = td[i];
-		vector<int>::iterator iterpos = td.begin();
-		int tempvalue = td[i - 1] * td[i + 1];
-		td.erase(iterpos + i, iterpos + i +1);
-		DFS(td, value + tempvalue);
-		td.insert(iterpos + i, temp);
+		int temp = vec[i];
+		vector<int>::iterator iterpos = vec.begin();
+		int tempvalue = vec[i - 1] * vec[i + 1];
+		vec.erase(iterpos + i, iterpos + i +1);
+		DFS(value + tempvalue);
+		vec.insert(iterpos + i, temp);
 	}
 
 }
 
 void solution() {
-	DFS(vec,0);
+	DFS(0);
 }
 
 int main() {
