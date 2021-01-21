@@ -315,6 +315,7 @@
     <ClCompile Include="BaekJoon 1965번 상자 넣기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1992번 쿼드트리.cpp" />
     <ClCompile Include="BaekJoon 2001번 보석 줍기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
