@@ -348,5 +348,8 @@
     <ClCompile Include="BaekJoon 1213번 팰린드롬 만들기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 5502번 팰린드롬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
