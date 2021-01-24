@@ -12,7 +12,6 @@ void input() {
 }
 
 void solution() {
-
 	int ans;
 	int a, b;
 	bool check = false;
@@ -23,36 +22,28 @@ void solution() {
 	}
 	else {
 		if (vec[0] == vec[1]) {
-			
 			int temp = vec[0];
-			for (auto now : vec) {
+			for (auto now : vec) 
 				if (temp != now) {
 					check = true;
 					break;
 				}
-			}
 			if (check) cout << "B";
 			else cout << vec[0];
 		}
 		else {
-
 			if (vec[1] == vec[2]) {
 				a = 0;
 				b = vec[1];
 			}
 			else {
-				if ((vec[1] - vec[2]) % (vec[0] - vec[1]) != 0)
-					check = true;
+				if ((vec[1] - vec[2]) % (vec[0] - vec[1]) != 0)	check = true;
 				else {
 					a = (vec[1] - vec[2]) / (vec[0] - vec[1]);
 					b = vec[1] - a * vec[0];
 				}
 			}	
-			if (!check) {
-				for (int i = 3; i < N; i++) {
-					if (vec[i] != vec[i - 1] * a + b) check = true;
-				}
-			}
+			if (!check) for (int i = 3; i < N; i++) if (vec[i] != vec[i - 1] * a + b) check = true;
 			if (check) cout << "B";
 			else cout << vec[N - 1] * a + b;
 		}		
