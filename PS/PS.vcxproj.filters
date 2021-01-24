@@ -363,5 +363,8 @@
     <ClCompile Include="Linear-sieve.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 16563번 어려운 소인수분해.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
