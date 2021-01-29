@@ -138,9 +138,6 @@
     <ClCompile Include="BaekJoon 10999번 구간합 구하기2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="practice.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="BaekJoon 16975번 수열과 쿼리 21.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -366,9 +363,6 @@
     <ClCompile Include="BaekJoon 16563번 어려운 소인수분해.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="응지 가르쳐주기!.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="A Odd Divisor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -403,6 +397,51 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BaekJoon 2176번 합리적인 이동경로 - 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 1289번 트리의 가중치.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="응지 가르쳐주기!.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="practice.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="A Red-Blue Shuffle .cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B Move and Turn.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C Row GCD.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 1706번 크로스워드.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 13022번 늑대와 올바른 단어.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 3300번 무어 기계.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 2176번 합리적인 이동경로 - 3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 14725번 개미굴.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="A.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="D.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
