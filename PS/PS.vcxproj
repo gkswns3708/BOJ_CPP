@@ -245,6 +245,7 @@
     <ClCompile Include="BaekJoon 14226번 이모티콘.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 14405번 피카츄.cpp" />
     <ClCompile Include="BaekJoon 14425번 문자열 집합.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
