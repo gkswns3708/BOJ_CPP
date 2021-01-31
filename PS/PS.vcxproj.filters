@@ -483,5 +483,8 @@
     <ClCompile Include="BaekJoon 16971번 배열 B의 값.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 4902번 삼각형의 값.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
