@@ -3,7 +3,6 @@ using namespace std;
 typedef long long int ll;
 #define INF LLONG_MIN
 int arr[800 + 1][800 + 1];
-ll dp[800 + 1][800 + 1];
 ll presum[800 + 1][800 + 1];
 int N;
 ll ans;
@@ -43,12 +42,10 @@ void solution() {
 void input() {
 	while (cin >> N && N != 0) {
 		memset(arr, 0, sizeof(arr));
-		memset(dp, 0, sizeof(dp));
 		memset(presum, 0, sizeof(presum));
 		ans = -INF;
 		for (int i = 1; i <= N; i++) for (int j = 1; j <= i * 2 - 1; j++) {
 			cin >> arr[i][j];
-			dp[i][j] = arr[i][j];
 		}
 		for (int i = 1; i <= N; i++) {
 			presum[i][1] = arr[i][1];
