@@ -486,5 +486,11 @@
     <ClCompile Include="BaekJoon 4902번 삼각형의 값.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 16637번 괄호 추가하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 8772번 Szyfr Cezara.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
