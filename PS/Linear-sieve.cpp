@@ -29,10 +29,10 @@ int main() {
 	ios_base::sync_with_stdio(0);
 	cout.tie(0);
 	cin.tie(0);
-	int pre = GetTickCount();
+	int pre = GetTickCount64();
 	int temp; cin >> temp;
 	linear_sieve(temp);
-	int now = GetTickCount();
+	int now = GetTickCount64();
 	cout <<now <<" " << pre<<" "<< pre - now;
 
 	return 0;
