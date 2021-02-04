@@ -1,11 +1,21 @@
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
-int main() {
-	int a, b;
-	cin >> a >> b;
-	cout.precision(15);
-	cout << (double(a) / double(b));
-	return 0;
+int main()
+{
+    queue<int> q;
+    q.push(10);
+    q.push(20);
+    q.push(30);
+
+    int q_size = q.size();
+
+    for (int i = 0; i < q_size; i++)
+    {
+        cout << q.front() << endl;
+        q.pop();
+    }
+    cout << endl;
 }
