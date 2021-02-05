@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include "BaekJoon 4781번 사탕 가게.h"
 using namespace std;
 typedef long long int ll;
 
@@ -31,11 +32,14 @@ void input() {
 }
 
 
-
 int main() {
 	ios_base::sync_with_stdio(0);
 	cout.tie(0);
 	cin.tie(0);
+	queue<int> que;
 	input();
 	return 0;
 }
+
+
+
