@@ -498,5 +498,8 @@
     <ClCompile Include="BaekJoon 4781번 사탕 가게.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 10597번 순열장난.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
