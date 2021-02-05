@@ -29,7 +29,7 @@ void input() {
 		for (int j = 1; j <= N; j++) {
 			cin >> dist[i][j];
 			visited[i][j] = true;
-		}
+		} 
 
 }
 
