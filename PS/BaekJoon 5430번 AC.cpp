@@ -33,7 +33,7 @@ void solution() {
 	}
 	if (possible) cout << "error\n";
 	else {
-		cout << "[";
+		cout << "["; 
 		if (!deq.empty()) {
 			if (flag) {
 				for (int i = deq.size()-1; i > 0 ; i--) cout << deq[i] << ",";
