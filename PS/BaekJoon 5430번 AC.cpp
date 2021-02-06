@@ -43,7 +43,7 @@ void solution() {
 			}
 			else {
 				if (flag) deq.pop_back();
-				else deq.pop_front();
+				else deq.pop_front(); 
 			}
 		}
 	}
