@@ -507,5 +507,8 @@
     <ClCompile Include="BaekJoon 1507번 궁금한 민호.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1463번 1로 만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
