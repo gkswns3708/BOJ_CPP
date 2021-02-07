@@ -23,35 +23,17 @@ int main() {
 	fastio;
 	int TC; cin >> TC;
 	while (TC--) {
-		int N, K; cin >> N >> K;
-		if (K >= 10000) {
-			cout << -1 << "\n";
-			continue;
-		}
-		vector<int> vec(N + 1);
-		for (int i = 0; i < N; i++) cin >> vec[i];
-		int check = 0;
-		for (int i = 1; i <= K; i++) {
-			for (int j = 0; j < N - 1; j++) {
-				//±¼·¯¼­ À§¿¡ ¿Â °æ¿ì
-				if (vec[j] < vec[j + 1]) {
-					vec[j]++;
-					if (i == K) check = j+1;
-					break;
-				}
-				//±¼·¯ ¶³¾îÁö´Â °æ¿ì.
-				else {
-					if (j == N - 2) {
-						check = -1;
-						break;
-					}
-				}
+		string s; cin >> s;
+		for (int i = 0; i < s.length(); i++) {
+			if (i % 2 == 0) {
+				if (s[i] == 'a') s[i] = 'b';
+				else s[i] = 'a';
 			}
-			if (check != 0) {
-				if (check == -1) cout << -1 << "\n";
-				else cout << check<< "\n";
-				break;
+			else {
+				if (s[i] == 'z') s[i] = 'y';
+				else s[i] = 'z';
 			}
 		}
+		cout << s <<"\n";
 	}
 }
