@@ -11,12 +11,12 @@ void solution() {
 	bool flag = false;
 	deque<int> deq;
 	string temp;
-	for (int i = 0; i < s1.size(); i++) {
-		if (s1[i] >= '0' && s1[i] <= '9') temp += s1[i];
-		else {
-			if(!temp.empty())deq.push_back(stoi(temp));
-			temp = "";
-		}
+	stringstream ss;
+	ss.str(s1);
+	char a;
+	while (ss >> a) {
+		int x;
+		if (ss >> x) deq.push_back(x);
 	}
 	for (int i = 0; i < s.length(); i++) {
 		if (s[i] == 'R') flag = !flag;
@@ -48,7 +48,6 @@ void solution() {
 	}
 }
 
-
 void input() {
 	int TC; cin >> TC;
 	while (TC--) {
@@ -58,7 +57,6 @@ void input() {
 		solution();
 	}
 }
-
 
 int main() {
 	fastio;
