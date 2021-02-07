@@ -37,7 +37,7 @@ void solution() {
 		int now = vec[st] + vec[ed];
 		if (now > value) ed--;
 		else if (now == value) {
-			ans++;
+			ans++; 
 			st++;
 			ed--;
 		}
