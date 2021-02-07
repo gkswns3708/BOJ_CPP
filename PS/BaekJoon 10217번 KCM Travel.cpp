@@ -46,6 +46,7 @@ void solution() {
 	int ans = INF;
 	for (int i = 1; i <= M; i++) ans = min(ans, dist[N][i]);
 	ans == INF ? cout << "Poor KCM\n" : cout << ans << "\n";
+
 }
 
 
