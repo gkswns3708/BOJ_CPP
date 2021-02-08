@@ -22,7 +22,7 @@ template<typename T> istream& operator>> (istream& in, pair<T, T>& i) { in >> i.
 string s;
 int len;
 
-bool checkpalin(int st,int ed) {	
+bool checkpalin(int st, int ed) {
 	for (; st < ed; st++, ed--) {
 		if (s[st] != s[ed]) return false;
 	}
@@ -31,28 +31,26 @@ bool checkpalin(int st,int ed) {
 
 int solution(string s) {
 	int ans = 0;
-	if (checkpalin(0,len-1)) return 0;
-	for (int st = 0, ed = len-1; st < ed; st++ ,ed--) {
+	for (int st = 0, ed = len - 1; st < ed; st++, ed--) {
 		if (s[st] != s[ed]) {
 			if (checkpalin(st + 1, ed)) return 1;
 			if (checkpalin(st, ed - 1)) return 1;
 			return 2;
 		}
 	}
-	return 2;
+	return 0;
 }
 
 void input() {
 	int TC; cin >> TC;
 	while (TC--) {
-		cin >> s;	
+		cin >> s;
 		len = s.length();
-		cout << solution(s)<<"\n";
+		cout << solution(s) << "\n";
 	}
 }
 
 int main() {
 	fastio;
 	input();
-	return 0;
 }
