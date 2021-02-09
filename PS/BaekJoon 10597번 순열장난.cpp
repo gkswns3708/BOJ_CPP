@@ -19,7 +19,6 @@ void solution(int pos) {
 	if (pos == len) 	{
 		for (auto a : vec)	cout << a << " "; 
 		exit(0);
-		return;
 	}
 	string temp;
 	for (int j = 0; j < len && j < 2; j++) {
