@@ -558,5 +558,8 @@
     <ClCompile Include="BaekJoon 2698번 인접한 비트의 개수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1563번 개근상.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
