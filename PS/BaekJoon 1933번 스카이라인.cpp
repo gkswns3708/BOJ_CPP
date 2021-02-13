@@ -3,6 +3,7 @@
 #define fastio ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 using namespace std;
 
+#define INF (int)1e9+7
 #define X first
 #define Y second
 #define sz(v) (int)(v).size()
@@ -22,29 +23,41 @@ template<typename T> istream& operator>> (istream& in, pair<T, T>& i) { in >> i.
 
 
 int N;
-vector<tiii> vec;
+vector<pii> vec;
 vector<pii> ans;
 map<int, int> mp;
 void input() {
 	cin >> N;
 	for (int i = 0; i < N; i++) {
-		int lx, h, rx; cin >> lx >> h >> rx;
-		vec.push_back({ lx, rx, h });
+		int L, H, R; cin >> L >> H >> R;
+		vec.push_back({ L,H });
+		vec.push_back({ R,-H });
 	}
 }
 void solution() {
 	sort(all(vec));
-	int size = vec.size();
-	int h = 1;
-	int plx = -1, prx = -1, ph = -1;
-	for (int i = 0; i < size; i++) {
-		auto [nlx, nrx, nh] = vec[i];
-		//안 겹칠 때
-		if (prx < nlx) {
-			ans.push_back({ prx,ph });
-
+	vec.push_back({ INF ,INF });
+	multiset<int> S;
+	//마지막은 무조건 0으로 끝남으로 0을 입력해줌.
+	S.insert(0);
+	int prex = vec[0].first;
+	int prey = -1;
+	for (int i = 0; i < 2 * N;) {
+		while (prex == vec[i].first) {
+			auto [nx, ny] = vec[i];
+			if (ny < 0) S.erase(S.find(-ny));
+			else S.insert(ny);
+			i++;
 		}
-
+		//마지막 원소를 반환함.
+		//cout << "The last element is " <<*prev(S.end()) << '\n';
+		//이런식
+		int val = *prev(S.end());
+		if (val != prey) {
+			cout << prex << ' ' << *prev(S.end()) << ' ';
+			prey = val;
+		}
+		prex = vec[i].first;
 	}
 }
 

@@ -21,8 +21,8 @@ template<typename T> istream& operator>> (istream& in, vector<T>& i) { for (auto
 template<typename T> istream& operator>> (istream& in, pair<T, T>& i) { in >> i.X >> i.Y; return in; }
 
 int N, M,ans = -INF;
-int arr[20 + 1][20 + 1];
-bool visited[20 + 1][20 + 1];
+int arr[1000 + 1][1000 + 1];
+bool visited[1000 + 1][1000 + 1];
 
 bool possible(int y, int x) {
 	if (y >= 0 && x >= 0 && y < N && x < M && !visited[y][x] ) return true;
