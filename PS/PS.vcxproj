@@ -194,6 +194,7 @@
     <ClCompile Include="BaekJoon 10422번 괄호.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1043번 거짓말.cpp" />
     <ClCompile Include="BaekJoon 10597번 순열장난.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

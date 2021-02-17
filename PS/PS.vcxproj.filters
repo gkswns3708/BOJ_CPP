@@ -579,5 +579,8 @@
     <ClCompile Include="BaekJoon 1406번 에디터.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1043번 거짓말.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
