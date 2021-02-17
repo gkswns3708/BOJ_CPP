@@ -31,8 +31,7 @@ ll ans(int days, int a, int b, int c) {
 	if (now != -1)
 		return now;
 
-	now = ans(days + 1, a + 1, 0, c) + ans(days + 1, a, b + 1, c) + ans(days + 1, a, 0, c + 1);
-	now%= MOD;
+	now = ans(days + 1, a + 1, 0, c) + ans(days + 1, a, b + 1, c) + ans(days + 1, a, 0, c + 1) % MOD;
 	return now;
 }
 

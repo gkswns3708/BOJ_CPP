@@ -38,7 +38,6 @@ void solution() {
 	sort(all(vec));
 	vec.push_back({ INF ,INF });
 	multiset<int> S;
-	//마지막은 무조건 0으로 끝남으로 0을 입력해줌.
 	S.insert(0);
 	int prex = vec[0].first;
 	int prey = -1;
@@ -49,9 +48,6 @@ void solution() {
 			else S.insert(ny);
 			i++;
 		}
-		//마지막 원소를 반환함.
-		//cout << "The last element is " <<*prev(S.end()) << '\n';
-		//이런식
 		int val = *prev(S.end());
 		if (val != prey) {
 			cout << prex << ' ' << *prev(S.end()) << ' ';
