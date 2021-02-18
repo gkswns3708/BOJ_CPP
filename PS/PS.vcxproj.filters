@@ -594,5 +594,8 @@
     <ClCompile Include="BaekJoon 17398번 통신망 분할.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 3780번 네트워크 연결.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
