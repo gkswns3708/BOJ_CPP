@@ -212,7 +212,9 @@
     <ClCompile Include="BaekJoon 11062번 카드 게임.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 11085번 군사 이동.cpp" />
+    <ClCompile Include="BaekJoon 11085번 군사 이동.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 1111번 IQ Test.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -426,7 +428,7 @@
     <ClCompile Include="BaekJoon 1738번 골목길.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 173989번 통신망 분할.cpp" />
+    <ClCompile Include="BaekJoon 17398번 통신망 분할.cpp" />
     <ClCompile Include="BaekJoon 17435번 함성함수와 쿼리.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
