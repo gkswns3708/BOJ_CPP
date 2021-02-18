@@ -1,60 +1,65 @@
 #include<bits/stdc++.h>
-
+#include <regex>
+#define fastio ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 using namespace std;
-int ar[1000][1000];
-bool visit[1000][1000][10 + 1];
-int dx[4] = { 1,0,-1,0 };
-int dy[4] = { 0,1,0,-1 };
-int N, M, K;
 
-bool ps(int y, int x, int wall) {
-	if (y >= 0 && y < N && x >= 0 && x < M && wall <= K && visit[y][x][wall] != true) return true;
-	else return false;
+#define X first
+#define Y second
+#define sz(v) (int)(v).size()
+#define all(v) (v).begin(), (v).end()
+#define rall(v) (v).rbegin(), (v).rend()
+#define compress(v) sort(all(v)), (v).erase(unique(all(v)), (v).end())
+#define OOB(x, y) ((x) < 0 || (x) >= n || (y) < 0 || (y) >= m)
+
+using ll = long long;
+using ull = unsigned long long;
+using pii = pair<int, int>;
+using pll = pair<ll, ll>;
+
+template<typename T> istream& operator>> (istream& in, vector<T>& i) { for (auto& i : i) in >> i; return in; }
+template<typename T> istream& operator>> (istream& in, pair<T, T>& i) { in >> i.X >> i.Y; return in; }
+
+int N, M, k;
+int parents[50 + 1];
+vector<int> know;
+vector<vector<int>> v(50);
+
+int Find(int x) {
+	return parents[x] == x ?  x : parents[x] = Find(parents[x]);
 }
-
-int BFS() {
-	queue<tuple<int, int, int>> que;
-	if (N == 1 && M == 1)return 0;
-	que.push({ 0,0,0 });
-	visit[0][0][0] = true;
-	int dist = 0;
-	while (!que.empty()) {
-		int size = que.size();
-		dist++;
-		while (size--) {
-			auto [y, x, wl] = que.front();
-			que.pop();
-			for (int i = 0; i < 4; i++) {
-				int ny = y + dy[i];
-				int nx = x + dx[i];
-				if (ps(ny, nx, wl + ar[ny][nx])) {
-					visit[ny][nx][wl + ar[ny][nx]] = true;
-					que.push({ ny,nx,wl + ar[ny][nx] });
-					if (ny == N - 1 && nx == M - 1) return dist;
-				}
-			}
-		}
-
-	}
-	return -1;
+void _Union(int a, int b) {
+	a = Find(a), b = Find(b);
+	a < b ? parents[b] = a : parents[a] = b;
 }
-
 
 int main() {
-	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-	cin >> N >> M >> K;
-	for (int i = 0; i < N; i++) {
-		string s;
-		cin >> s;
-		for (int j = 0; j < M; j++) {
-			ar[i][j] = s[j] - '0';
+	fastio;
+	cin >> N >> M >> k;
+	know.resize(k);
+	for (int i = 0; i < k; i++) cin >> know[i];
+
+	for (int i = 1; i <= N; i++) parents[i] = i;
+
+	for (int i = 0; i < M; i++) {
+		int p; cin >> p;
+		int num, prev;
+		for (int j = 0; j < p; j++) {
+			if (j >= 1) {
+				prev = num;
+				cin >> num;
+				_Union(prev, num);
+			}
+			else cin >> num;
+			v[i].push_back(num);
 		}
 	}
-
-	int ans = BFS();
-	if (ans != -1) {
-		cout << ans + 1 << "\n";
+	for (auto vec : v) {
+		bool flag = false;
+		for (auto now : vec) {
+			if (flag) break;
+			for (auto t : know) if (Find(now) == Find(t)) 	flag = true;				
+		}
+		if (flag) M--;
 	}
-	else cout << -1 << "\n";
-	return 0;
+	cout << M;
 }
