@@ -618,5 +618,8 @@
     <ClCompile Include="BaekJoon 14908번 구두 수선공.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 16207번 직사각형.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
