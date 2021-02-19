@@ -47,7 +47,7 @@ void solution() {
 		nw += vec[i].first;
 	}
 	if (nw < M)cout << -1;
-	else cout << np;
+	else cout << np; 
 }
 
 int main() {
