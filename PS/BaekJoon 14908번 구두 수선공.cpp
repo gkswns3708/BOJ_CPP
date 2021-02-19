@@ -22,7 +22,7 @@ template<typename T> istream& operator>> (istream& in, pair<T, T>& i) { in >> i.
 int N;
 vector<pair<int,double>> vec;
 
-void input() {
+void input() { 
 	cin >> N;
 	vec.resize(N);
 	for (int i = 0; i < N; i++) {
