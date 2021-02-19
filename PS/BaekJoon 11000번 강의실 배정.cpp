@@ -148,7 +148,7 @@ void solution() {
 	}
 	int now = pq.size();
 	writeInt(now);
-	bflush();
+	bflush(); 
 }
 
 int main() {
