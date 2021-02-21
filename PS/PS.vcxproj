@@ -296,6 +296,7 @@
     <ClCompile Include="BaekJoon 14725번 개미굴.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 14728번 벼락치기.cpp" />
     <ClCompile Include="BaekJoon 14907번 프로젝트 스케줄링.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -347,7 +348,9 @@
     <ClCompile Include="BaekJoon 16724번 피리 부는 사나이.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 16724번 피리부는 사나이 - 2.cpp" />
+    <ClCompile Include="BaekJoon 16724번 피리부는 사나이 - 2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 16923번 다음 다양한 단어.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
