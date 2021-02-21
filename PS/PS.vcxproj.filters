@@ -630,5 +630,8 @@
     <ClCompile Include="BaekJoon 14728번 벼락치기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 16638번 괄호 추가하기 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
