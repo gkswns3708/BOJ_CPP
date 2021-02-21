@@ -344,7 +344,10 @@
     <ClCompile Include="BaekJoon 16678번 모독.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 16724번 피리 부는 사나이.cpp" />
+    <ClCompile Include="BaekJoon 16724번 피리 부는 사나이.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 16724번 피리부는 사나이 - 2.cpp" />
     <ClCompile Include="BaekJoon 16923번 다음 다양한 단어.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
