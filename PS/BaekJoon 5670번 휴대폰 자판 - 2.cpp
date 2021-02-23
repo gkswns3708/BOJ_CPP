@@ -1,9 +1,9 @@
+
 #include<bits/stdc++.h>
 #include <regex>
 #define fastio ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 using namespace std;
 
-#define TrieNode 26
 #define X first
 #define Y second
 #define sz(v) (int)(v).size()
@@ -20,73 +20,58 @@ using pll = pair<ll, ll>;
 template<typename T> istream& operator>> (istream& in, vector<T>& i) { for (auto& i : i) in >> i; return in; }
 template<typename T> istream& operator>> (istream& in, pair<T, T>& i) { in >> i.X >> i.Y; return in; }
 
+const int alphabet = 26;
+
 struct Trie {
-	Trie* next[TrieNode];
-	bool start,finish;
-	bool nextChild;
-	int cnt = 0;
+	Trie* next[alphabet];
+	bool finish, start,nextChild;
+	int cnt;
 
 	Trie() {
-		fill(next, next + TrieNode, nullptr);
+		fill(next, next + alphabet, nullptr);
 		start = finish = nextChild = false;
 		cnt = 0;
 	}
+
 	~Trie() {
-		for (int i = 0; i < TrieNode; i++)
+		for (int i = 0; i < alphabet; i++)
 			if (next[i]) delete next[i];
 	}
 
 	bool insert(const char* key, bool isStart) {
-		if (isStart) 
+		if (isStart)
 			start = true;
 		if (*key == '\0') {
 			finish = true;
 			return true;
 		}
-		
+
 		int nextKey = *key - 'a';
 		if (!next[nextKey]) {
 			next[nextKey] = new Trie;
 			cnt++;
 		}
-
 		nextChild = true;
-		return next[nextKey]->insert(key + 1, false);
+		cout << key << " " << key + 1 << " - key¿Í key+1\n";
+
+		return next[nextKey]->insert(key+1,false);
 	}
 
-	int search(const char* key) {
-		int ret = 0;
-		if (*key == '\0')
-			return ret;
-		int nextKey = *key - 'a';
-
-		if (cnt >= 2 || (cnt == 1 && finish) || start)
-			ret += 1;
-
-		ret += next[nextKey]->search(key + 1);
-		return ret;
-	}
 };
 
-char str[100002][82];
+void input() {
+	
+}
+
+void solution() {
+
+}
 
 int main() {
 	fastio;
-	int n;
-	while (cin >> n) {
-		for (int i = 0; i < n; i++) cin >> str[i];
-
-		Trie* root = new Trie;
-
-		for (int i = 0; i < n; i++)
-			root->insert(str[i], true);
-
-		int ret = 0;
-		for (int i = 0; i < n; i++) {
-			ret += root->search(str[i]);
-		}
-		cout << fixed << setprecision(2) << 1.0 * ret / n << "\n";
-		delete root;
+	int TC; cin >> TC;
+	while (TC--) {
+		input();
+		solution();
 	}
-	
 }

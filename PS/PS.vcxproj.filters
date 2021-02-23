@@ -639,5 +639,8 @@
     <ClCompile Include="BaekJoon 5670번 휴대폰 자판.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 5670번 휴대폰 자판 - 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
