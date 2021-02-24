@@ -651,5 +651,8 @@
     <ClCompile Include="BaekJoon 14889번 스타트와 링크.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2776번 암기왕.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
