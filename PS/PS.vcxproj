@@ -329,7 +329,9 @@
     <ClCompile Include="BaekJoon 16207번 직사각형.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 16401번 과자 나눠주기.cpp" />
+    <ClCompile Include="BaekJoon 16401번 과자 나눠주기.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 16404번 주식회사 승범이네.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -684,6 +686,7 @@
     <ClCompile Include="BaekJoon 6236번 용돈 관리.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 7795번 먹을 것인가 먹힐 것인가.cpp" />
     <ClCompile Include="BaekJoon 8012번 한동이는 영업사원!.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
