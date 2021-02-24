@@ -125,10 +125,24 @@ template<typename T> istream& operator>> (istream& in, pair<T, T>& i) { in >> i.
 
 int N, M;
 vector<int> vec;
+
+bool BinarySearch(int value) {
+	int st = -1, ed = N + 1;
+	int mid;
+	while (st + 1 < ed) {
+		mid = (st + ed) >> 1;
+		if (mid > N - 1 || mid < 0) break;
+		if (vec[mid] == value) return true;
+		if (vec[mid] > value) ed = mid;
+		else st = mid;
+	}
+	return false;
+}
+
 void input() {
 	N = readInt();
 	vec.resize(N);
-	for (int i = 0; i < N; i++) vec[i] = readInt();
+	for (int i = 0; i < N; i++)vec[i] = readInt();
 	sort(all(vec));
 }
 
@@ -136,18 +150,22 @@ void solution() {
 	int M; M = readInt();
 	for (int i = 0; i < M; i++) {
 		int nownum; nownum = readInt();
-		if (lower_bound(all(vec), nownum) != upper_bound(all(vec), nownum)) writeInt(1), newLine();
-		else writeInt(0), newLine();
+		if (BinarySearch(nownum)) {
+			writeInt(1); 
+			newLine();
+		}
+		else {
+			writeInt(0);
+			newLine();
+		}
 	}
-	bflush();
+	bflush(); 
 }
 
 int main() {
-	fastio;
 	int TC; TC = readInt();
 	while (TC--) {
 		input();
 		solution();
 	}
-	
 }
