@@ -116,7 +116,6 @@ void input() {
 	N = readInt();
 	D = readInt();
 	ST = readInt();
-	//assert(N >= 15000);
 	for (int i = 1; i <= N; i++) edge[i].clear(), costarr[i] = INF;
 	for (int i = 1; i <= D; i++) {
 		int from, to, cost;
