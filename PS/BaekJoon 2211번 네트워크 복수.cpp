@@ -14,10 +14,10 @@ int main() {
 	cin.tie(0);
 	cout.tie(0);
 	int N, M; cin >> N >> M;
-	vector<pair<int,int>> Edge[1000 + 1];
+	vector<pair<int, int>> Edge[1000 + 1];
 	for (int i = 0; i < M; i++) {
 		int from, to, cost; cin >> from >> to >> cost;
-		Edge[from].push_back({ to,cost }); 
+		Edge[from].push_back({ to,cost });
 		Edge[to].push_back({ from,cost });
 	}
 	fill(dist, dist + 1000 + 1, INF);
@@ -42,6 +42,6 @@ int main() {
 
 	cout << N - 1 << "\n";
 	for (int i = 2; i <= N; i++)
-		cout << parent[i] << " "<< i << "\n";
+		cout << parent[i] << " " << i << "\n";
 	return 0;
 }
