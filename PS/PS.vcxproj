@@ -783,6 +783,7 @@
     <ClCompile Include="BaekJoon 2176번 합리적인 이동경로 - 3.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 16987번 계란으로 계란치기 - 2.cpp" />
     <ClCompile Include="C Ball in Berland.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
