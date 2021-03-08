@@ -777,6 +777,7 @@
     <ClCompile Include="BaekJoon 9342번 염색체.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 9660번 돌 게임 6.cpp" />
     <ClCompile Include="BaekJoon 9942번 하노이의 네 탑.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
