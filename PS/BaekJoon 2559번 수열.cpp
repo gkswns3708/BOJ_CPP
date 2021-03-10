@@ -12,7 +12,7 @@ int32_t main() {
 	cout.tie(0);
 	int N, K; cin >> N >> K;
 	vector<int> prefix_sum(N+1);
-	for (int i = 1; i <= N; i++) {
+	for (int i = 1; i <= N; i++) { 
 		int temp; cin >> temp;
 		prefix_sum[i] += prefix_sum[i - 1] + temp;
 	}
