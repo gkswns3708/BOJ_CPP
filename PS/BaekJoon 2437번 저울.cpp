@@ -4,6 +4,7 @@
 #include <map>
 using namespace std;
 int N;
+
 vector<int> weight;
 vector<int> prefix_sum;
 
