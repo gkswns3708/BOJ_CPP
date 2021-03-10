@@ -762,5 +762,8 @@
     <ClCompile Include="BaekJoon 3020번 개똥벌레.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 20543번 폭탄 던지는 태영이.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
