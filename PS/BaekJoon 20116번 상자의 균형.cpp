@@ -1,11 +1,9 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-using namespace std;
-
 #define int long long int
-
 #define INF (1e9)+7
+using namespace std;
 
 vector<int> vec;
 int N, L;
