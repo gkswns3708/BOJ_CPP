@@ -233,7 +233,9 @@
     <ClCompile Include="BaekJoon 1111번 IQ Test.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 11441번 합 구하기.cpp" />
+    <ClCompile Include="BaekJoon 11441번 합 구하기.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 11478번 서로 다른 부분 문자열의 개수.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -495,6 +497,7 @@
     <ClCompile Include="BaekJoon 1738번 골목길.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 17390번 이건 꼭 풀어야 해.cpp" />
     <ClCompile Include="BaekJoon 17398번 통신망 분할.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
