@@ -747,5 +747,8 @@
     <ClCompile Include="BaekJoon 20116번 상자의 균형.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2559번 수열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
