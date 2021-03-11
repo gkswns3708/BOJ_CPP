@@ -777,5 +777,8 @@
     <ClCompile Include="BaekJoon 3896번 소수 사이 수열.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2660번 회장뽑기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
