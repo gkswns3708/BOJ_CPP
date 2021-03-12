@@ -803,7 +803,10 @@
     <ClCompile Include="BaekJoon 6236번 용돈 관리.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 6581번 HTML.cpp" />
+    <ClCompile Include="BaekJoon 6324번 URLs.cpp" />
+    <ClCompile Include="BaekJoon 6581번 HTML.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 6591번 이항 쇼다운.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

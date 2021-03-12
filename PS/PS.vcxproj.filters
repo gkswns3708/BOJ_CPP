@@ -786,5 +786,8 @@
     <ClCompile Include="BaekJoon 6581번 HTML.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 6324번 URLs.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
