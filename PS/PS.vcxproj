@@ -371,6 +371,7 @@
     <ClCompile Include="BaekJoon 16207번 직사각형.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 16398번 행성 연결.cpp" />
     <ClCompile Include="BaekJoon 16401번 과자 나눠주기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -740,7 +741,9 @@
     <ClCompile Include="BaekJoon 3300번 무어 기계.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 3584번 가장 가까운 공통 조상.cpp" />
+    <ClCompile Include="BaekJoon 3584번 가장 가까운 공통 조상.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 3613번 Java vs C++.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
