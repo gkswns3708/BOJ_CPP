@@ -798,5 +798,11 @@
     <ClCompile Include="BaekJoon 16398번 행성 연결.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 14923번 미로 탈출.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2021 KAKAO BLIND RECRUITMENT 메뉴 리뉴얼.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
