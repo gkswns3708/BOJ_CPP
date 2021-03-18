@@ -804,5 +804,14 @@
     <ClCompile Include="2021 KAKAO BLIND RECRUITMENT 메뉴 리뉴얼.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 3908번 서로 다른 소수의 합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 19535번 ㄷㄷㄷㅈ.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 8982번 수족관 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
