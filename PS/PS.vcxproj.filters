@@ -813,5 +813,11 @@
     <ClCompile Include="BaekJoon 8982번 수족관 1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="codeforces.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 2021번 최소 환승 경로.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
