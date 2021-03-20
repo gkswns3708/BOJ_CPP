@@ -822,5 +822,20 @@
     <ClCompile Include="BaekJoon 5214번 환승.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Startup Coding Festival - 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Startup Coding Festival - 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Startup Coding Festival - 3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Startup Coding Festival - 4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Startup Coding Festival - 5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
