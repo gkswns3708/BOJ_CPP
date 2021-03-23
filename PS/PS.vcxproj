@@ -182,7 +182,10 @@
     <ClCompile Include="B.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 15988번 1,2,3 더하기 3.cpp" />
+    <ClCompile Include="BaekJoon 15988번 1,2,3 더하기 3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 15989번 1,2,3 더하기 4.cpp" />
     <ClCompile Include="BaekJoon 9095번 1,2,3 더하기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
