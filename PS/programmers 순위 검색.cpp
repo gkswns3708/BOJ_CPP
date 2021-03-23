@@ -1,46 +1,86 @@
-#include <iostream>
+#include <string>
 #include <vector>
+#include <iostream>
+#include <map>
+#include <sstream>
 #include <algorithm>
-#define INF 987654321
 using namespace std;
-typedef long long int ll;
-//노드의 수 n , 시작지점 s , a의 도착 지점 a, b의 도착 지점 b
-int solution(int n, int s, int a, int b, vector<vector<int>> fares) {
-	int answer = INF;
-	int edge[210][210] = { 0, };
-	for (int i = 0; i < 210; i++) {
-		for (int j = 0; j < 210; j++) {
-			edge[i][j] = INF;
-		}
-	}
-	for (int i = 1; i <= n; i++) edge[i][i] = 0;
-	for (auto now : fares) {
-		int from, to, dist;
-		from = now[0], to = now[1], dist = now[2];
-		edge[from][to] = dist;
-		edge[to][from] = dist;
-	}
-	for (int i = 1; i <= n; i++) {
-		for (int j = 1; j <= n; j++) {
-			for (int k = 1; k <= n; k++) {
-				if (edge[j][k] > edge[j][i] + edge[i][k])
-					edge[j][k] = edge[j][i] + edge[i][k];
-			}
-		}
-	}
-	for (int i = 1; i <= n; i++) {
-		if (edge[s][i] == INF || edge[i][a] == INF || edge[i][b] == INF) continue;
-		answer = min(answer, edge[s][i] + edge[i][a] + edge[i][b]);
-	}
 
-	return answer;
-}
+map<string, int> lang, job, year, food;
+map<string, int> qlang, qjob, qyear, qfood;
+map<string, int> trans;
 
-int main() {
-	ios_base::sync_with_stdio(0);
-	cout.tie(0);
-	cin.tie(0);
-	//input();
-	//solution();
-	return 0;
+vector<int> sscore(25);
+
+vector<int> solution(vector<string> info, vector<string> query) {
+    lang["cpp"] = 0, lang["java"] = 1, lang["python"] = 2;
+    job["backend"] = 0, job["frontend"] = 1;
+    year["junior"] = 0, year["senior"] = 1;
+    food["chicken"] = 0, food["pizza"] = 1;
+    qlang["-"] = -1, qlang["cpp"] = 0, qlang["java"] = 1, qlang["python"] = 2;
+    qjob["-"] = -1, qjob["backend"] = 0, qjob["frontend"] = 1;
+    qyear["-"] = -1, qyear["junior"] = 0, qyear["senior"] = 1;
+    qfood["-"] = -1, qfood["chicken"] = 0, qfood["pizza"] = 1;
+    vector<int> answer;
+    struct Info { int l, j, y, f; int score; };
+    struct Query { int l, j, y, f; int score; };
+    vector<Info> v;
+    for (auto& now : info) {
+        Info cur;
+        stringstream ss;
+        string nl, nj, ny, nf;
+        ss << now;
+        string nows[4];
+        int i = 0;
+        ss >> nl >> nj >> ny >> nf;
+        cur.l = lang[nl];
+        cur.j = job[nj];
+        cur.y = year[ny];
+        cur.f = food[nf];
+        ss >> cur.score;
+        v.push_back(cur);
+        //java backend junior pizza 150 -> 파싱 후 붙인 문자열을 s
+        sscore[trans[s]].push_back(score);
+    }
+    //] 200 
+
+    vector<Query> q;
+    for (auto& now : query) {
+        Query cur;
+        stringstream ss;
+        string nl, nj, ny, nf;
+        ss << now;
+        string nows[6];
+        int i = 0;
+        while (ss >> nows[i]) {
+            if (nows[i] == "and") continue;
+            else i++;
+        }
+        cur.l = qlang[nows[0]];
+        cur.j = qjob[nows[1]];
+        cur.y = qyear[nows[2]];
+        cur.f = qfood[nows[3]];
+        cur.score = stoi(nows[4]);
+        q.push_back(cur);
+    }
+    vector<int> ans[3][2][2][2];
+    for (auto& now : v) ans[now.l][now.j][now.y][now.f].push_back(now.score);
+    for (int l = 0; l < 3; l++)for (int j = 0; j < 2; j++)for (int y = 0; y < 2; y++)for (int f = 0; f < 2; f++) {
+        sort(ans[l][j][y][f].begin(), ans[l][j][y][f].end());
+    }
+    for (auto& now : q) {
+        int answer1 = 0;
+        for (int l = (now.l == -1 ? 0 : now.l); l <= (now.l == -1 ? 2 : now.l); l++) {
+            for (int j = (now.j == -1 ? 0 : now.j); j <= (now.j == -1 ? 1 : now.j); j++) {
+                for (int y = (now.y == -1 ? 0 : now.y); y <= (now.y == -1 ? 1 : now.y); y++) {
+                    for (int f = (now.f == -1 ? 0 : now.f); f <= (now.f == -1 ? 1 : now.f); f++) {
+                        answer1 += ans[l][j][y][f].size() - (lower_bound(ans[l][j][y][f].begin(), ans[l][j][y][f].end(), now.score) - ans[l][j][y][f].begin());
+                    }
+                }
+            }
+        }
+        answer.push_back(answer1);
+    }
+    //for (auto now : answer) cout << now << " ";
+    return answer;
 }
