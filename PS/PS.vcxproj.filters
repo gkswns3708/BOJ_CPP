@@ -858,9 +858,6 @@
     <ClCompile Include="BaekJoon 15990번 1,2,3 더하기 5.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="BeakJoon 2725번 보이는 점의 개수.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="BaekJoon 1456번 거의 소수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -871,6 +868,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BaekJoon 2281번 데스노트.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 2560번 짚신벌레.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 2725번 보이는 점의 개수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
