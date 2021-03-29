@@ -182,7 +182,9 @@
     <ClCompile Include="B.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 1188번 음식 평론가.cpp" />
+    <ClCompile Include="BaekJoon 1188번 음식 평론가.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 1456번 거의 소수.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -195,6 +197,7 @@
     <ClCompile Include="BaekJoon 15990번 1,2,3 더하기 5.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2281번 데스노트.cpp" />
     <ClCompile Include="BaekJoon 9095번 1,2,3 더하기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
