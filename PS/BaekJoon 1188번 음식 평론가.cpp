@@ -15,6 +15,5 @@ int32_t main() {
 	int N, M; cin >> N >> M;
 	int a = N / M, b = N % M;
 	cout << M - _gcd(M, b);
-
 	return 0;
 }
