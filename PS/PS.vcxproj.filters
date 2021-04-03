@@ -888,5 +888,8 @@
     <ClCompile Include="BaekJoon 1865번 웜홀.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1261번 알고스팟.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
