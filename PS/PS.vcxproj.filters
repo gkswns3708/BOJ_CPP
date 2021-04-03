@@ -885,5 +885,8 @@
     <ClCompile Include="BaekJoon 13168번 내일로 여행.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1865번 웜홀.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
