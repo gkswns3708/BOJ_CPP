@@ -912,5 +912,8 @@
     <ClCompile Include="BaekJoon 20061번 도노미노도미노 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2792번 보석 상자.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
