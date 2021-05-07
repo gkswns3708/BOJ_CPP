@@ -906,13 +906,16 @@
     <ClCompile Include="BaekJoon 15681번 트리와 쿼리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="소스.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="BaekJoon 20061번 도노미노도미노 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BaekJoon 2792번 보석 상자.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 14465번 소가 길을 건너간 이유 5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 14468번 소가 길을 건너간 이유 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
