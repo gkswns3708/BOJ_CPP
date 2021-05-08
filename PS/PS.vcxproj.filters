@@ -921,5 +921,8 @@
     <ClCompile Include="BaekJoon 2343번 기타 레슨.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1197번 최소 스패닝 트리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
