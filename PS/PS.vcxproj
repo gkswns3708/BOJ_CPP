@@ -233,7 +233,10 @@
     <ClCompile Include="BaekJoon 21275번 폰 호석만.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 21276번 계보 복원가 호석.cpp" />
+    <ClCompile Include="BaekJoon 21276번 계보 복원가 호석.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 21277번 짠돌이 호석.cpp" />
     <ClCompile Include="BaekJoon 21278번 호석이 두 마리 치킨.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
