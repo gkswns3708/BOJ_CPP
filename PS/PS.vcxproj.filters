@@ -954,5 +954,8 @@
     <ClCompile Include="BaekJoon 2533번 사회망 서비스(SNS).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2058번 원자의 에너지.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
