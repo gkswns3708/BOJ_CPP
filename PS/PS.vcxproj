@@ -200,7 +200,9 @@
     <ClCompile Include="BaekJoon 12015번 가장 긴 증가하는 부분 수열 2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 13314번 플로이드에 오타가.cpp" />
+    <ClCompile Include="BaekJoon 13314번 플로이드에 오타가.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 14465번 소가 길을 건너간 이유 5.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -249,6 +251,7 @@
     <ClCompile Include="BaekJoon 20061번 도노미노도미노 2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 20164번 홀 수 홀릭 호석.cpp" />
     <ClCompile Include="BaekJoon 2058번 원자의 에너지.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
