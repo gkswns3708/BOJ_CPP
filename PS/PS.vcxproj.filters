@@ -987,5 +987,8 @@
     <ClCompile Include="BaekJoon 11657번 타임머신 - 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1865번 웜홀 - 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
