@@ -34,8 +34,7 @@ int32_t main() {
 			}
 		}
 	}
-	for (int i = 2; i <= N; i++) {
-		cout << ((dist[i] == INF) ? -1 : dist[i]) << '\n';
-	}
+	for (int i = 2; i <= N; i++) cout << ((dist[i] == INF) ? -1 : dist[i]) << '\n';
+	
 	return 0;
 }
