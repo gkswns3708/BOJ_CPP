@@ -146,7 +146,9 @@
     <ClCompile Include="BaekJoon 11657번 타임머신 - 2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 11780번 플로이드 2.cpp" />
+    <ClCompile Include="BaekJoon 11780번 플로이드 2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 1197번 최소 스패닝 트리.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -222,6 +224,7 @@
     <ClCompile Include="BaekJoon 1461번 도서관.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 14938번 서강그라운드.cpp" />
     <ClCompile Include="BaekJoon 15681번 트리와 쿼리 - 2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
