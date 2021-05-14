@@ -996,5 +996,8 @@
     <ClCompile Include="BaekJoon 14938번 서강그라운드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 20166번 문자열 지옥에 빠진 호석.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
