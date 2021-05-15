@@ -251,6 +251,9 @@
     <ClCompile Include="BaekJoon 1774번 우주신과의 교감.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 18405번 경제적 전염.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 1854번 K번째 최단경로 찾기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -269,7 +272,9 @@
     <ClCompile Include="BaekJoon 20164번 홀 수 홀릭 호석.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 20166번 문자열 지옥에 빠진 호석.cpp" />
+    <ClCompile Include="BaekJoon 20166번 문자열 지옥에 빠진 호석.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 2058번 원자의 에너지.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -451,7 +456,7 @@
     <ClCompile Include="BaekJoon 1365번 꼬인 전깃줄.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Baekjoon 13925번 수열과 쿼리 13.cpp">
+    <ClCompile Include="BaekJoon 13925번 수열과 쿼리 13.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="BaekJoon 1406번 에디터.cpp">

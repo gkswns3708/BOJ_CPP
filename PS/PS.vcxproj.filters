@@ -141,7 +141,7 @@
     <ClCompile Include="BaekJoon 16975번 수열과 쿼리 21.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Baekjoon 13925번 수열과 쿼리 13.cpp">
+    <ClCompile Include="BaekJoon 13925번 수열과 쿼리 13.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BaekJoon 9267번 A+B.cpp">
@@ -997,6 +997,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BaekJoon 20166번 문자열 지옥에 빠진 호석.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 18405번 경제적 전염.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
