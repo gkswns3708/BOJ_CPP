@@ -1002,5 +1002,8 @@
     <ClCompile Include="BaekJoon 18405번 경제적 전염.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1153번 네 개의 소수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
