@@ -30,7 +30,7 @@ int32_t main() {
 		if (y >= 0 && y < N && x >= 0 && x < N && virus[y][x].first == -1) return true;
 		else return false;
 	};
-
+	 
 	int dist = 1;
 	while (!que.empty()) {
 		int size = que.size();
@@ -48,6 +48,7 @@ int32_t main() {
 		}
 		dist++;
 	}
+
 	int s, y, x; cin >> s >> y >> x;
 	if (virus[y - 1][x - 1].second > s) cout << 0;	
 	else cout << virus[y - 1][x - 1].first;
