@@ -227,7 +227,9 @@
     <ClCompile Include="BaekJoon 1461번 도서관.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 14698번 전생했더니 슬라임 연구자였던 건에 대하여 (Hard).cpp" />
+    <ClCompile Include="BaekJoon 14698번 전생했더니 슬라임 연구자였던 건에 대하여 (Hard).cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 14938번 서강그라운드.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -279,6 +281,7 @@
     <ClCompile Include="BaekJoon 20166번 문자열 지옥에 빠진 호석.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 20181번 꿈틀꿈틀 호석 애벌레 - 효율성.cpp" />
     <ClCompile Include="BaekJoon 2058번 원자의 에너지.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
