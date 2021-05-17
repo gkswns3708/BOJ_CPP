@@ -281,7 +281,10 @@
     <ClCompile Include="BaekJoon 20166번 문자열 지옥에 빠진 호석.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 20181번 꿈틀꿈틀 호석 애벌레 - 효율성.cpp" />
+    <ClCompile Include="BaekJoon 20181번 꿈틀꿈틀 호석 애벌레 - 효율성 - 2.cpp" />
+    <ClCompile Include="BaekJoon 20181번 꿈틀꿈틀 호석 애벌레 - 효율성.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 2058번 원자의 에너지.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
