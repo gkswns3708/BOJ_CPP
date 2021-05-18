@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaekJoon 1005번 ACM Craft.cpp" />
     <ClCompile Include="BaekJoon 11404번 플로이드.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -296,7 +297,9 @@
     <ClCompile Include="BaekJoon 21275번 폰 호석만.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 21276번 계보 복원가 호석 - 2.cpp" />
+    <ClCompile Include="BaekJoon 21276번 계보 복원가 호석 - 2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 21276번 계보 복원가 호석.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
