@@ -1026,5 +1026,8 @@
     <ClCompile Include="BaekJoon 1516번 게임 개발.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2252번 줄 세우기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
