@@ -233,7 +233,9 @@
     <ClCompile Include="BaekJoon 14698번 전생했더니 슬라임 연구자였던 건에 대하여 (Hard).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 14907번 프로젝트 스케줄링 - 2.cpp" />
+    <ClCompile Include="BaekJoon 14907번 프로젝트 스케줄링 - 2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 14938번 서강그라운드.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -279,6 +281,7 @@
     <ClCompile Include="BaekJoon 1865번 웜홀.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1948번 임계경로.cpp" />
     <ClCompile Include="BaekJoon 1949번 우수 마을.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
