@@ -1035,5 +1035,8 @@
     <ClCompile Include="BaekJoon 1948번 임계경로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2618번 경찰차 - 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
