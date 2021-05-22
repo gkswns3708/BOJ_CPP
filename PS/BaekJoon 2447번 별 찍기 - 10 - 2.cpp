@@ -37,7 +37,7 @@ int32_t main() {
 			cout << arr[i][j];
 		}
 		cout << "\n";
-	}
+	} 
 
 	return 0;
 }
