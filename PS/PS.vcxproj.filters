@@ -1041,5 +1041,11 @@
     <ClCompile Include="BaekJoon 2447번 별 찍기 - 10 - 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1725번 히스토그램.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 6549번 히스토그램에서 가장 큰 직사각형.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
