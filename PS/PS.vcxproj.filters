@@ -1050,5 +1050,8 @@
     <ClCompile Include="BaekJoon 1493번 박스 채우기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 5639번 이진 검색 트리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
