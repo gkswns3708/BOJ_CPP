@@ -1,0 +1,77 @@
+#include <iostream>
+using namespace std;
+
+struct Seg {
+	int tree[3030];
+	int bias;
+	void init(int n) { for (bias = 1; bias < n; bias <<= 1); }
+	void update(int x, int v) {
+		x += bias; tree[x] = v;
+		while (x >>= 1) {
+			tree[x] = tree[x << 1] + tree[x << 1 | 1];
+		}
+	}
+	int query(int l, int r) {
+		l += bias, r += bias;
+		int ret = 0;
+		while (l < r) {
+			if (l & 1) ret += tree[l++];
+			if (!(r & 1)) ret += tree[r--];
+			l >>= 1, r >>= 1;
+		}
+		if (l == r) ret += tree[r];
+		return ret;
+	}
+};
+
+struct Seg2d {
+	Seg tree[3030];
+	int bias;
+	void init(int n, int m) {
+		for (bias = 1; bias < n; bias <<= 1);
+		for (int i = 0; i <= bias * 2; i++) tree[i].init(m);
+	}
+	void update(int x, int y, int v) {
+		x += bias; tree[x].update(y, v);
+		while (x >>= 1) {
+			int t1 = tree[x << 1].query(y, y);
+			int t2 = tree[x << 1 | 1].query(y, y);
+			tree[x].update(y, t1 + t2);
+		}
+	}
+	int query(int l, int r, int ll, int rr) {
+		l += bias, r += bias;
+		int ret = 0;
+		while (l < r) {
+			if (l & 1) ret += tree[l++].query(ll, rr);
+			if (!(r & 1)) ret += tree[r--].query(ll, rr);
+			l >>= 1, r >>= 1;
+		}
+		if (l == r) ret += tree[r].query(ll, rr);
+		return ret;
+	}
+}seg;
+
+int main() {
+	ios_base::sync_with_stdio(0); cin.tie(0);
+	int n, m; cin >> n >> m;
+	seg.init(n, n);
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= n; j++) {
+			int t; cin >> t;
+			seg.update(i, j, t);
+		}
+	}
+
+	while (m--) {
+		int op, a, b, c, d; cin >> op;
+		if (!op) {
+			cin >> a >> b >> c;
+			seg.update(a, b, c);
+		}
+		else {
+			cin >> a >> c >> b >> d;
+			cout << seg.query(a, b, c, d) << "\n";
+		}
+	}
+}
