@@ -1,14 +1,13 @@
-#include <iostream>
-#include <algorithm>
-#include <cstring>
-#include <vector>
+#include <bits/stdc++.h>
+#define int int64_t
+#define pii pair<int,int>
+#define tiii tuple<int,int,int>
 using namespace std;
 
-int main() {
+int32_t main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
-	int a; cin >> a;
-	cout << a <<"\n"; //"\n"
+
 	return 0;
 }
