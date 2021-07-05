@@ -1071,5 +1071,8 @@
     <ClCompile Include="BaekJoon 10868번 최솟값.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 21941번 문자열 제거.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
