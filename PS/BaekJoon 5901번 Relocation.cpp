@@ -15,11 +15,9 @@ void Dijkstra(int st, int cnt) {
 	priority_queue<pii, vector<pii>, greater<pii>> pq;
 	pq.push({ 0,st });
 	dist[st][cnt] = 0;
-
 	while (!pq.empty()) {
 		auto [length, now] = pq.top();
 		pq.pop();
-
 		for (const auto& nxt : edge[now]) {
 			auto [tmplength, nxtpos] = nxt;
 			if (dist[nxtpos][cnt] > length + tmplength) {
@@ -44,9 +42,7 @@ int32_t main() {
 		edge[ed].push_back({ length,st });
 	}
 	for (int i = 0; i < K; i++) for (int j = 1; j <= N; j++) dist[j][i] = INF; // 초기화
-	
 	for(int i = 0 ; i <K;i++) Dijkstra(cycle[i],i); //cycle을 시작으로 하는 최단 경로 파악
-
 	vector<int> vec;
 	for (int i = 0; i < K; i++) vec.push_back(i);
 	int ans = INF;
