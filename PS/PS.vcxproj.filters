@@ -1077,5 +1077,8 @@
     <ClCompile Include="BaekJoon 1944번 복제 로봇.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 5901번 Relocation.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
