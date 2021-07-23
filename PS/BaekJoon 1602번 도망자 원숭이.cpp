@@ -20,7 +20,7 @@ int32_t main() {
 		dog_cost[i][i] = weight;
 		dw_index.push_back({ weight,i });
 	}
-	sort(dw_index.begin(), dw_index.end());
+	//sort(dw_index.begin(), dw_index.end());
 	
 	for (int i = 0; i <= N; i++) for (int j = 0; j <= N; j++) {
 		dog_cost[i][j] = max(dog_cost[i][i], dog_cost[j][j]);
