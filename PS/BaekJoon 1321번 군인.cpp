@@ -12,22 +12,22 @@ struct ST {
 		sz = 1LL << h;
 		tree.resize(sz << 1);
 		for (int i = 0; i < arr.size(); i++) tree[i + sz] = arr[i];
-		for (int i = sz-1 ; i >= 0; i--) tree[i] = tree[i * 2] + tree[i * 2 + 1];
+		for (int i = --sz ; i >= 0; i--) tree[i] = tree[i * 2] + tree[i * 2 + 1];
 	}
 
 	void update(int i, int x) {
-		int node = i + sz-1;
+		int node = i + sz;
 		tree[node] += x;
 		while (node >>= 1) tree[node] = tree[node << 1] + tree[node << 1 | 1];
 	}
 	int query(int x) {
 		int i = 1;
-		while (i <= (sz-1)) {
+		while (i <= sz) {
 			int l = tree[i << 1], r = tree[i << 1 | 1];
 			if (l >= x) i <<= 1;//왼쪽에 있는 경우
 			else i = i << 1 | 1, x -= l; //i가 오른쪽으로 가고 x는 원래 왼쪽의 사람들 만큼 빠짐.
 		}
-		return i - (sz-1);
+		return i - sz;
 	}
 };
 
