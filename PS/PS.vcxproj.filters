@@ -1098,5 +1098,8 @@
     <ClCompile Include="BaekJoon 13537번 수열과 쿼리 1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2243번 사탕상자.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
