@@ -1104,5 +1104,8 @@
     <ClCompile Include="BaekJoon 7578번 공장.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 17409번 증가 수열의 개수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
