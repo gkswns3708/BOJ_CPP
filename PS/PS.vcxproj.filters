@@ -1119,5 +1119,11 @@
     <ClCompile Include="BaekJoon 1633번 최고의 팀 만들기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2705번 팰린드롬 파티션.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 20044번 Project Teams.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
