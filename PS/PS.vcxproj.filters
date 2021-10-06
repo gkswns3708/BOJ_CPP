@@ -1110,5 +1110,8 @@
     <ClCompile Include="BaekJoon 14391번 종이 조각.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 22857번 가장 긴 짝수 연속한 부분 수열 (small).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
