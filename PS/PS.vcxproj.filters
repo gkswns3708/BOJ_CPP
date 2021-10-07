@@ -1128,5 +1128,8 @@
     <ClCompile Include="BaekJoon 1364번 울타리 치기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="월간 코드 챌린지 3회차.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
