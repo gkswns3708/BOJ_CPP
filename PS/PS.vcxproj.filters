@@ -1125,5 +1125,8 @@
     <ClCompile Include="BaekJoon 20044번 Project Teams.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1364번 울타리 치기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
