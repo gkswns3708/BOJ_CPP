@@ -1140,5 +1140,8 @@
     <ClCompile Include="BaekJoon 17971번 Ladder Game.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2121번 넷이 놀기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
