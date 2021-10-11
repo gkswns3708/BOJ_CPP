@@ -1143,5 +1143,8 @@
     <ClCompile Include="BaekJoon 2121번 넷이 놀기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 23248번 Treasure Hunter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
