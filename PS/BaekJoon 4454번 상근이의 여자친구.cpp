@@ -22,8 +22,8 @@ int32_t main()
             if (caloil(a, b, c, d, v) * m < v * t) l = v; //속도가 빠르면 
             else r = v;
         }
-        r = floor(r * 100) / 100;
-        cout << fixed << setprecision(2) << r << "\n";
+        l = l - 0.005;
+        cout << fixed << setprecision(2) << l << "\n";
     }
     return 0;
 }
