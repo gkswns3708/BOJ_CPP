@@ -171,8 +171,13 @@
     <ClCompile Include="BaekJoon 1166번 선물.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 15810 풍선 공장.cpp" />
-    <ClCompile Include="BaekJoon 4454번 상근이의 여자친구.cpp" />
+    <ClCompile Include="BaekJoon 12915번 대회 개최.cpp" />
+    <ClCompile Include="BaekJoon 15810 풍선 공장.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 4454번 상근이의 여자친구.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 23248번 Treasure Hunter.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
