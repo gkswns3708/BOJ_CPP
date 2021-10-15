@@ -1158,5 +1158,8 @@
     <ClCompile Include="BaekJoon 12915번 대회 개최.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1885번 비부분수열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
