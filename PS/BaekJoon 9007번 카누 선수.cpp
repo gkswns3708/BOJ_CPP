@@ -22,7 +22,6 @@ void solution() {
     sum1.clear(), sum2.clear();
     for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) sum1.push_back(vec[0][i] + vec[1][j]);
     for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) sum2.push_back(vec[2][i] + vec[3][j]);
-    sort(sum1.begin(), sum1.end());
     sort(sum2.begin(), sum2.end());
     for (int i = 0; i < sum1.size(); i++) {
         int goal = k - sum1[i];
