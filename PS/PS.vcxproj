@@ -171,7 +171,6 @@
     <ClCompile Include="BaekJoon 1166번 선물.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 11834번 홀짝.cpp" />
     <ClCompile Include="BaekJoon 12915번 대회 개최.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
