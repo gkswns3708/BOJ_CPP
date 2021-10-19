@@ -30,7 +30,7 @@ bool possible(int mid) {
 }
 
 
-void input() {
+void input() { 
     cin >> N >> X;
     vec.resize(N);
     for (auto& now : vec) cin >> now, total += now;
