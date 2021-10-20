@@ -12,7 +12,7 @@ bool possible(int mid) {
     else {
         priority_queue<int, vector<int>, greater<int>> pq;
         int cnt = 0;
-        for (auto& now : vec) {
+        for (auto& now : vec) { 
             if (++cnt <= mid) { 
                 pq.push(now); 
                 if (now > X) return false;    
