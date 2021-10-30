@@ -4,9 +4,8 @@
 #define tiii tuple<int, int, int>
 using namespace std;
 
-int _gcd(int a, int b) {
-    return b == 0 ? a : _gcd(b, a % b);
-}
+int n, k;
+
 
 int32_t main()
 {
@@ -15,32 +14,28 @@ int32_t main()
     cout.tie(0);
     int TC; cin >> TC;
     while (TC--) {
-        int n; cin >> n;
+        cin >> n >> k;
         vector<int> vec(n);
+        vector<int> cntvec(n);
         for (int i = 0; i < n; i++) cin >> vec[i];
-        int sum = 0;
-        vector<bool> pm;
+        int tempk = k;
+        int pos = 0;
+        int createnum = 0;
+        int ans = 0;
         for (int i = 0; i < n - 1; i++) {
-            if (vec[i] >= 0) {
-                if (sum < 0) sum += vec[i], pm.push_back(true);
-                else sum -= vec[i], pm.push_back(false);
+            if (int(pow(10, vec[i + 1] - vec[i])) - 1 <= tempk) {
+                tempk -= int(pow(10, vec[i + 1] - vec[i])) - 1;
+                pos = i + 1; 
+                cntvec[i] = int(pow(10, vec[i + 1] - vec[i])) - 1;
             }
-            else {
-                if (sum < 0) sum -= vec[i], pm.push_back(false);
-                else sum += vec[i], pm.push_back(true);
-            }
+            else break;
         }
-        int tempsum;
-        if (sum < 0) tempsum = -sum;
-        else tempsum = sum;
-        int now_gcd;
-        if (tempsum >= vec[n - 1])now_gcd = _gcd(tempsum, vec[n - 1]);
-        else now_gcd = _gcd(vec[n - 1], tempsum);
-        for (auto now : pm) {
-            if (now) cout << 1 * vec[n-1] / now_gcd << " ";
-            else cout << -1 * vec[n - 1] / now_gcd << " ";
-        }
-        cout << -sum / now_gcd << "\n";
+        string s; 
+        for (int i = 0; i <= vec[pos] - 1; i++) s.push_back('9');      
+        if(!s.empty()) ans += stoll(s);
+        ans += (tempk + 1) * int(pow(10, vec[pos]));
+        cout << ans << "\n";
+
     }
     return 0;
 }
