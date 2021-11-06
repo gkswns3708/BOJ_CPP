@@ -1191,5 +1191,8 @@
     <ClCompile Include="BaekJoon 2346번 풍선 터뜨리기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 2695번 N번째 큰 수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
