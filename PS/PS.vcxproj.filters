@@ -1203,5 +1203,8 @@
     <ClCompile Include="BaekJoon 6576번 쿼드 트리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 6580번 쿼드 트리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
