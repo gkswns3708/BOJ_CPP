@@ -1206,7 +1206,7 @@
     <ClCompile Include="BaekJoon 6580번 쿼드 트리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="BaekJoon 1802번 종이 접기.cpp">
+    <ClCompile Include="BaekJoon 23567번 Double Rainbow.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

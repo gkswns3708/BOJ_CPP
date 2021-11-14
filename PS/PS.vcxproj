@@ -158,7 +158,7 @@
     <ClCompile Include="BaekJoon 11536번 줄 세우기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 1802번 종이 접기.cpp" />
+    <ClCompile Include="BaekJoon 23567번 Double Rainbow.cpp" />
     <ClCompile Include="BaekJoon 21965번 드높은 남산 위에 우뚝 선.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -611,7 +611,9 @@
     <ClCompile Include="BaekJoon 6576번 쿼드 트리.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaekJoon 6580번 쿼드 트리.cpp" />
+    <ClCompile Include="BaekJoon 6580번 쿼드 트리.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BaekJoon 7578번 공장.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
