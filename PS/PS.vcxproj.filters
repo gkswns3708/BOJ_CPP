@@ -1209,5 +1209,8 @@
     <ClCompile Include="BaekJoon 23567번 Double Rainbow.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="kpu 셔틀버스 대기시간.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
