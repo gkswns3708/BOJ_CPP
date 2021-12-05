@@ -1221,5 +1221,11 @@
     <ClCompile Include="BaekJoon 8731번 Sznurki .cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 8610번 Szyfr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 23324번 어려운 모든 정점 쌍 최단 거리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
