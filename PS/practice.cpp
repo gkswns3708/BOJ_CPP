@@ -1,39 +1,48 @@
+// 두 단계 최단 경로 3
 #include <bits/stdc++.h>
-#define int int64_t
-#define pii pair<int, int>
-#define tiii tuple<int, int, int>
+
+#define fastio ios::sync_with_stdio(0), cin.tie(0), cout.tie(0)
 using namespace std;
+const int INF = int(1e9);
+typedef pair<int, int> pii;
+int dist[100'001];
 
-vector<int> white, black;
-
-int dp[1000 + 1][15 + 1][15 + 1];
-
-int DFS(int wcnt, int bcnt, int pos) {
-    if (wcnt == 0 && bcnt == 0 || pos == white.size()) return 0;
-    int& ret = dp[pos][wcnt][bcnt];
-    if (ret != -1) return ret;
-    if (wcnt > 0) ret = max(ret, DFS(wcnt - 1, bcnt, pos + 1) + white[pos]);
-    if (bcnt > 0) ret = max(ret, DFS(wcnt, bcnt - 1, pos + 1) + black[pos]);
-    ret = max(ret, DFS(wcnt, bcnt, pos + 1));
-    return ret;
-}
-
-void input() {
-    int w, b;
-    while (cin >> w >> b) white.push_back(w), black.push_back(b);
-    memset(dp, -1, sizeof dp);
-}
-
-void solution() {
-    cout << DFS(15, 15, 0);
-}
-
-int32_t main()
-{
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
-    input();
-    solution();
+int main() {
+    fastio;
+    int n, m;
+    cin >> n >> m;
+    vector<pii> adj[100'001];
+    vector<int> midpoint;
+    for (int i = 0; i < m; ++i) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        adj[u].push_back({ v, w });
+        adj[v].push_back({ u, w });
+    }
+    int st, en, p;
+    cin >> st >> en >> p;
+    for (int i = 0; i < p; ++i) {
+        int y;
+        cin >> y;
+        midpoint.push_back(y);
+    }
+    fill(dist + 1, dist + n + 1, INF);
+    priority_queue<pii, vector<pii>, greater<pii>> PQ;
+    dist[st] = 0;
+    PQ.push({ dist[st], st });
+    while (!PQ.empty()) {
+        auto [idx, cost] = PQ.top();
+        PQ.pop();
+        if (dist[idx] != cost) {
+            continue;
+        }
+        for (auto [ncost, nidx] : adj[idx]) {
+            if (dist[nidx] > cost + ncost) {
+                dist[nidx] = cost + ncost;
+                PQ.push({ dist[nidx], nidx });
+            }
+        }
+    }
+    cout << (dist[en] == INF ? -1 : dist[en]);
     return 0;
 }
