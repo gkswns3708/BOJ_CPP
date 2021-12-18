@@ -10,7 +10,7 @@ vector<pii> vec;
 bool cmp(pii a, pii b) {
     auto [aa, ab] = a;
     auto [ba, bb] = b;
-    if (aa == 0) return 0;
+    if (aa == 0) return 0; 
     else if (ba == 0) return 1;
     else if (ab == 0 && bb == 0) return aa < ba;
     return ab * ba < aa* bb;
