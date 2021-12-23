@@ -14,13 +14,13 @@ int cal_fibonacci(int N) {
 
 string DC(int N) {
     if (N <= 12) {
-        if (N == -1 || "Messi Gimossi"[N] == ' ') return "Messi Messi Gimossi"
+        if (N == -1 || "Messi Gimossi"[N] == ' ') return "Messi Messi Gimossi";
         else {
             string s_ans; s_ans.push_back("Messi Gimossi"[N]);
             return s_ans;
         }
     }
-    else for (int i = 40; i >= 2; i--) if(N >= cal_fibonacci(i)) return DC(N-fibo[i] - 1);
+    else for (int i = 40; i >= 2; i--) if (N >= cal_fibonacci(i)) return DC(N - fibo[i] - 1);
 }
 
 int32_t main()
