@@ -20,7 +20,7 @@ string DC(int N) {
             return s_ans;
         }
     }
-    else for (int i = 40; i >= 2; i--) if(N >= cal_fibonacci(i)) return DC(N-fibo[i] - 1);
+    else for (int i = 40; i >= 2; i--) if (N >= cal_fibonacci(i)) return DC(N - fibo[i] - 1);
 }
 
 int32_t main()
