@@ -17,7 +17,7 @@ int DP(int l, int r, int flag) {
     int pos = flag ? r : l;
     int light = p_sum[N] - p_sum[r] + p_sum[l - 1]; //현재 켜져있는 가로등의 전력 소비량
     if (l > 1) {
-        int tmp = DP(l - 1, r, 0) + (vec[pos].first - vec[l-1].first) * light;
+        int tmp = DP(l - 1, r, 0) + (vec[pos].first - vec[l - 1].first) * light;
         if (ret == -1 || tmp < ret) ret = tmp;
     }
     if (r < N) {
@@ -40,6 +40,6 @@ int32_t main()
     }
     memset(dp, -1, sizeof(dp));
     cout << DP(M, M, 0); //M,M 1은 굳이 안해도 됨.
-    
+
     return 0;
 }
