@@ -4,27 +4,13 @@
 #define tiii tuple<int, int, int>
 using namespace std;
 
-int N, M;
-vector<pii> vec;
-vector<int> p_sum;
-int dp[1000 + 3][1000 + 3][2]; // [i][j][flag] : i~j번째 가로등이 모두 꺼졌고, 현재 위치는 0이면 i 1이면 j이다.
+vector<tiii> vec;
+int N, A, B;
 
-int DP(int l, int r, int flag) {
-    if (l == 1 && r == N) return 0; // 더 끌 가로등 존재 x
-    int& ret = dp[l][r][flag];
-    if (ret != -1) return ret;
-
-    int pos = flag ? r : l;
-    int light = p_sum[N] - p_sum[r] + p_sum[l - 1]; //현재 켜져있는 가로등의 전력 소비량
-    if (l > 1) {
-        int tmp = DP(l - 1, r, 0) + (vec[pos].first - vec[l-1].first) * light;
-        if (ret == -1 || tmp < ret) ret = tmp;
-    }
-    if (r < N) {
-        int tmp = DP(l, r + 1, 1) + (vec[r + 1].first - vec[pos].first) * light;
-        if (ret == -1 || tmp < ret) ret = tmp;
-    }
-    return ret;
+bool cmp(tiii a, tiii b) {
+    auto [n1, A1, B1] = a;
+    auto [n2, A2, B2] = b;
+    return abs(A1-B1) > abs(A2-B2);
 }
 
 int32_t main()
@@ -32,14 +18,27 @@ int32_t main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-    cin >> N >> M;
-    vec.resize(N + 1), p_sum.resize(N + 1);
-    for (int i = 1; i <= N; i++) {
-        cin >> vec[i].first >> vec[i].second;
-        p_sum[i] = p_sum[i - 1] + vec[i].second;
+    while (1) {
+        int N, A, B; cin >> N >> A >> B;
+        if (N == 0 && A == 0 && B == 0) exit(0);
+        vec.resize(N);
+        for (auto& now : vec) {
+            auto& [n, a, b] = now;
+            cin >> n >> a >> b;
+        }
+        sort(vec.begin(), vec.end(), cmp);
+        int ans = 0;
+        for (auto now : vec) {
+            auto [n, a, b] = now;
+            if (a < b)
+                if (n > A)  ans += A * a, ans += b * (n - A), A = 0, B -= (n - A);
+                else  ans += n * a, A -= n;
+            else if (a == b)  ans += n * a;// 어차피 남은거로 진행되고, 무조건 됨
+            else
+                if (n > B) ans += B * b, ans += a * (n - B), B = 0, A -= (n - B);
+                else ans += n * b, B -= n;
+        }
+        cout << ans << "\n";
     }
-    memset(dp, -1, sizeof(dp));
-    cout << DP(M, M, 0); //M,M 1은 굳이 안해도 됨.
-    
     return 0;
 }
