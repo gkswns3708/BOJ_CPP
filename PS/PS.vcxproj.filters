@@ -1242,5 +1242,8 @@
     <ClCompile Include="BaekJoon 24023번 아기 홍윤.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 1857번 발레리노.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
