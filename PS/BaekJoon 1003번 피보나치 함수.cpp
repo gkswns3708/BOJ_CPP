@@ -7,7 +7,7 @@
 #include <deque>
 #include <list>
 typedef long long int ll;
-using namespace std;
+////using namespace std;
 ll visitleftup[40 + 1];
 ll fibonacci(int n) {
 	if (n == 1 || n == 2) {
