@@ -1251,5 +1251,17 @@
     <ClCompile Include="BaekJoon 8416 Tetris Attack.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 24480번 알고리즘 수업 - 깊이 우선 탐색2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 24479번 알고리즘 수업 - 깊이 우선 탐색 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 24444번 알고리즘 수업 - 너비 우선 탐색 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 24445번 알고리즘 수업 - 너비 우선 탐색 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

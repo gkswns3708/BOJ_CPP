@@ -36,7 +36,7 @@ int32_t main() {
         adj[from].push_back(to);
         adj[to].push_back(from);
     }
-    for (int i = 1; i <= N; i++) sort(adj[i].begin(), adj[i].end(), greater<int>()); // 오름 차순 정렬
+    for (int i = 1; i <= N; i++) sort(adj[i].begin(), adj[i].end()); // 오름 차순 정렬
     BFS(R);
     for (int i = 1; i <= N; i++) cout << dist[i] << "\n";
     return 0;
