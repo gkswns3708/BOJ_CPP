@@ -1263,5 +1263,14 @@
     <ClCompile Include="BaekJoon 24445번 알고리즘 수업 - 너비 우선 탐색 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BaekJoon 13575번 보석 가게.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 20176번 Needle.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon 5051번 피타고라스의 정리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
